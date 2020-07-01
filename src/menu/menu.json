@@ -1,0 +1,82 @@
+{
+  "Desayunos": [{
+    "name": "Café",
+    "value": "$1000",
+    "img": "http://imgfz.com/i/bCoVdGF.png"
+  }, {
+    "name": "Té",
+    "value": "$700",
+    "img": "http://imgfz.com/i/nfAmqgJ.png"
+  }, {
+    "name": "Jugo Natural",
+    "value": "$1500",
+    "img": "http://imgfz.com/i/LiKdspr.png"
+  }, {
+    "name": "Arrollado",
+    "value": "$1300",
+    "img": "http://imgfz.com/i/sb63xhk.png"
+  }, {
+    "name": "Paila con huevo",
+    "value": "$1500",
+    "img": "http://imgfz.com/i/U1Jy0BE.png"
+  }, {
+    "name": "Longaniza",
+    "value": "$1500"
+  }, {
+    "name": "Marraqueta",
+    "value": "0"
+  }, {
+    "name": "Amasado",
+    "value": "0"
+  }],
+  "Almuerzos": [{
+    "name": "Porotos",
+    "value": "$2500",
+    "img": "http://imgfz.com/i/ENrgfvt.png"
+  }, {
+    "name": "Cazuela",
+    "value": "$3000",
+    "img": "http://imgfz.com/i/whOdHKV.png"
+  }, {
+    "name": "Humitas (unidad)",
+    "value": "$1500",
+    "img": "http://imgfz.com/i/WNzHsYe.png"
+  }, {
+    "name": "Pastel de choclo",
+    "value": "$4000",
+    "img": "http://imgfz.com/i/S4OvozA.png"
+  }, {
+    "name": "Charquicán",
+    "value": "$3000",
+    "img": "http://imgfz.com/i/wtqGuzo.png"
+  }, {
+    "name": "Pantrucas",
+    "value": "$3000",
+    "img": "http://imgfz.com/i/aQgA98G.png"
+  }],
+  "Bebestibles": [{
+    "name": "Agua 500ml",
+    "value": "$1000",
+    "img": "http://imgfz.com/i/yrp0xoH.png"
+  }, {
+    "name": "Gaseosa 500ml",
+    "value": "$700",
+    "img": "http://imgfz.com/i/chsGEFf.png"
+  }, {
+    "name": "Jugo Mote 500ml",
+    "value": "$1000",
+    "img": "http://imgfz.com/i/eSiTNWy.png"
+  }, {
+    "name": "Pisco Sour",
+    "value": "$2500",
+    "img": "http://imgfz.com/i/XtlnM1Y.png"
+  }, {
+    "name": "Arregla'o",
+    "value": "$3000",
+    "img": "http://imgfz.com/i/47iewAh.png"
+  }, {
+    "name": "Vino",
+    "value": "$15000",
+    "img": "http://imgfz.com/i/NGYJ7bW.png"
+  }]
+}

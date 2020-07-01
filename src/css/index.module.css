@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url(../img/fondo.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  color: white;
+}
+
+h1,
+p {
+  color: white;
+}
+
+.breakfast {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 20px;
+}
+
+.containerLeft {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 55%;
+  background: rgba(233, 55, 44, 0.97);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  margin: 10px;
+}
+
+h3 {
+  color: white;
+}
+
+.containerRight {
+  flex-direction: column;
+  width: 45%;
+  background: #E1B589;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 768px) {}
