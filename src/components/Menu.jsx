@@ -28,7 +28,7 @@ const Menu = () => {
           })}
         </div>
         <div className={styles.containerRight}>
-          <p>HOOOLAAA</p>
+          <p>HOOOLAAA Probando PRobando</p>
         </div>
       </div>
     </Fragment>
