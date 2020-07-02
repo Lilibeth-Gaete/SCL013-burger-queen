@@ -6,9 +6,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(../img/fondo.jpg);
-  background-size: auto;
-  background-repeat: no-repeat;
+  background: url(https://i.pinimg.com/originals/fc/a3/3f/fca33f325c82e5d9faa4d85913028b1d.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: repeat;
 }
 
 code {
@@ -28,6 +29,12 @@ p {
   justify-content: space-between;
   background: rgba(0, 0, 0, 0.45);
   border-radius: 20px;
+  width: 100%;
+}
+
+.DailyMenu{
+  display: flex;
+  flex-direction: column;
 }
 
 .containerLeft {

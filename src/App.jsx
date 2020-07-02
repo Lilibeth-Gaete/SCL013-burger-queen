@@ -1,4 +1,5 @@
 import React from "react";
+
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import { firebase } from "./firebase";
 import Menu from "./components/Menu";
@@ -23,8 +24,8 @@ function App() {
 
   return (
     <Router>
-      <div>
-        <Link to="/menu">menu</Link>
+      <div> 
+        <Link to="/menu">Menu</Link>
         <Link to="/orden">Orden</Link>
       </div>
       <Switch>
