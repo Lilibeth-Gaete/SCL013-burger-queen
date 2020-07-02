@@ -1,15 +1,15 @@
 {
   "Desayunos": [{
     "name": "Café",
-    "precio": "1000",
+    "precio": 1000,
     "img": "http://imgfz.com/i/bCoVdGF.png"
   }, {
     "name": "Té",
-    "precio": "700",
+    "precio": 700,
     "img": "http://imgfz.com/i/nfAmqgJ.png"
   }, {
     "name": "Jugo Natural",
-    "precio": "1500",
+    "precio": 1500,
     "img": "http://imgfz.com/i/LiKdspr.png"
   }, {
     "name": "Arrollado",

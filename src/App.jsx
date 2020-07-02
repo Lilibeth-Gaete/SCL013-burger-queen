@@ -23,13 +23,13 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div> 
+    <Router >
+      <div>
         <Link to="/menu">Menu</Link>
         <Link to="/orden">Orden</Link>
       </div>
       <Switch>
-        <Route path="/menu">
+        <Route path="/">
           <Menu />
         </Route>
         <Route path="/orden">
