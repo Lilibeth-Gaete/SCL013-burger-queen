@@ -9,6 +9,16 @@ const Menu = () => {
 
   let desayunos = data.Desayunos;
   console.log(desayunos);
+
+  const boleta = (e) => {
+    console.log(e.target.name);
+    const precio = e.target.value;
+    const precioPedido = parseInt(precio);
+    console.log(parseInt(precio));
+    // console.log(e.target.name);
+  };
+
+  const hola = "buscando precio";
   return (
     <Fragment>
       <Registro />
@@ -22,13 +32,25 @@ const Menu = () => {
                 <p>
                   <img src={element.img} />
                 </p>
-                <p>{element.value}</p>
+                <p>{element.precio}</p>{" "}
+
+
+                <button
+                  className="btn btn-success"
+                  value={element.precio}
+                  name={element.name}
+                  onClick={boleta}
+
+                >
+                  Agregar
+                </button>
+
               </div>
             );
           })}
         </div>
         <div className={styles.containerRight}>
-          <p>HOOOLAAA Probando PRobando</p>
+          <p></p>
         </div>
       </div>
     </Fragment>
