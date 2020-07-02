@@ -8,7 +8,15 @@ import Bebestibles from "./Bebestibles";
 //import ReactDOM from 'react-dom'
 
 const Menu = () => {
-  
+ 
+ const boleta = (e) => {
+    console.log(e.target.name);
+    const precio = e.target.value;
+    const precioPedido = parseInt(precio);
+    console.log(parseInt(precio));
+    // console.log(e.target.name);
+  };
+
   return (
     <Fragment>
       <Registro />
@@ -19,7 +27,7 @@ const Menu = () => {
        <Bebestibles />
        </div>
         <div className={styles.containerRight}>
-          <p>HOOOLAAA Probando PRobando</p>
+          <p></p>
         </div>
       </div>
     </Fragment>
