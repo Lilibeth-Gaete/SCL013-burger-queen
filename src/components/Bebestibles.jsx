@@ -18,17 +18,17 @@ const Bebestibles = () => {
   console.log(bebestibles);
   return (
     <Fragment>
+      <h1>Bebestibles</h1>
       <div className={styles.containerLeft}>
         {bebestibles.map((element, i) => {
           console.log(element.name);
           return (
-            <div>
-              <p key={i}>{element.name} </p>
+            <div className={styles.food}>
               <p>
                 <img src={element.img} />
               </p>
-              <p>{element.precio}</p>
-              <button onClick={boleta} value={element.precio} name={element.name}> Agregar</button>
+              <p key={i}>{element.name} ${element.precio}</p>
+              <button onClick={boleta} value={element.precio} name={element.name} className="btn btn-dark"> Agregar</button>
             </div>
           );
         })}

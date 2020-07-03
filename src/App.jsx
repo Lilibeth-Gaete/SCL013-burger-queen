@@ -1,5 +1,5 @@
 import React from "react";
-
+import styles from "./css/index.module.css";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import { firebase } from "./firebase";
 import Menu from "./components/Menu";
@@ -23,11 +23,13 @@ function App() {
   }, []);
 
   return (
+    <div>
     <Router >
-      <div>
-        <Link to="/menu">Menu</Link>
-        <Link to="/orden">Orden</Link>
-      </div>
+      <div className="container mt-5">
+        <div className="btn-group">
+        <Link to="/menu" className="btn btn-dark">Menu</Link>
+        <Link to="/orden" className="btn btn-dark">Orden</Link>
+        </div>
       <Switch>
         <Route path="/">
           <Menu />
@@ -36,7 +38,9 @@ function App() {
           <Orden />
         </Route>
       </Switch>
+      </div>
     </Router>
+    </div>
   );
 }
 
