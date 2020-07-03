@@ -1,32 +1,45 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(https://i.pinimg.com/originals/fc/a3/3f/fca33f325c82e5d9faa4d85913028b1d.jpg);
+  background: url(https://i.pinimg.com/originals/fc/a3/3f/fca33f325c82e5d9faa4d85913028b1d.jpg);*/
+  background: url("../img/fondo.jpg");
+  background-color:black;
   background-size: 100%;
   background-attachment: fixed;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
 }
 
-code {
+/*code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
   color: white;
+}*/
+
+h1{
+  font-size: 25px;
+  color: white;
+  margin:15px 20px 2px 20px;
 }
 
-h1,
-p {
-  color: white;
+
+.generalContainer{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  
 }
 
 .breakfast {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  /*flex-flow: row wrap;*/
+  justify-content: center;
   background: rgba(0, 0, 0, 0.45);
   border-radius: 20px;
   width: 100%;
@@ -39,13 +52,26 @@ p {
 
 .containerLeft {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  width: 55%;
-  background: rgba(233, 55, 44, 0.97);
+  background: rgb(44, 44, 44);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  margin: 10px;
+  padding:20px;
+  width: 80%;
+  margin: 20px;
+  margin-right: 0px;
+}
+
+.containerLeft p{
+  color:white;
+  font-size: 14px;
+  margin-top:12px;
+}
+
+.containerLeft button{
+  font-size: 14px;
+  margin-bottom:30px;
 }
 
 h3 {
@@ -53,14 +79,64 @@ h3 {
 }
 
 .containerRight {
-  flex-direction: column;
-  width: 45%;
   background: #E1B589;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  margin: 10px;
+  margin: 65px;
+  margin-left: 0px;
+  height:auto;
+  width: 50%;
+}
+
+.containerRight h3{
+color:rgb(32, 32, 32);
+text-align: center;
+margin:20px;
+}
+
+.food{
+  text-align: center;
+  margin:10px; 
+  }
+
+.registerContainer input{
+  width: 350px;
 }
 
 
+@media screen and (max-width: 768px) {
 
-@media screen and (max-width: 768px) {}
+.food{
+text-align: center;
+margin:2px; 
+}
+
+.food p{
+  font-size: 12px;
+}
+
+.containerLeft img{
+  width: 50%;
+  margin:5px;
+}
+
+.containerLeft{
+  width: 82%;
+  margin-top: 20px;
+  margin-right: 0px;
+}
+
+.containerRight{
+  width: 50%;
+  margin-left: 0px;
+}
+
+h1{
+  font-size:20px;
+  margin:10px 20px;
+}
+
+.containerRight h3{
+  font-size: 18px;
+  }
+}

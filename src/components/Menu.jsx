@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import styles from "../css/index.module.css";
 //import data from "../menu/menu.json";
+
 import Registro from "./Registro";
 import Desayunos from "./Desayunos";
 import Almuerzos from "./Almuerzos";
@@ -16,10 +17,13 @@ const Menu = () => {
     console.log(parseInt(precio));
     // console.log(e.target.name);
   };
+ 
+
 
   return (
     <Fragment>
       <Registro />
+      <div className={styles.generalContainer}>
       <div className={styles.breakfast}>
         <div className={styles.DailyMenu}>
        <Desayunos />
@@ -27,8 +31,9 @@ const Menu = () => {
        <Bebestibles />
        </div>
         <div className={styles.containerRight}>
-          <p></p>
+          <h3>Resumen Pedido</h3>
         </div>
+      </div>
       </div>
     </Fragment>
   );
