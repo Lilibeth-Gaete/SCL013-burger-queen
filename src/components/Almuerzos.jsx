@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import styles from "../css/index.module.css";
 import data from "../menu/menu.json";
+import ResumenPedido from "./ResumenPedido";
+import Bebestibles from "./Bebestibles";
 
 
 const Almuerzos = () => {
@@ -26,20 +28,28 @@ const Almuerzos = () => {
   return (
     <Fragment>
       <h1>Almuerzos</h1>
-      <div className={styles.containerLeft}>
-        {almuerzos.map((element, i) => {
-          console.log(element.name);
-          return (
-            <div className={styles.food}>
-              <p>
-                <img src={element.img} />
-              </p>
-              <p key={i}>{element.name} ${element.precio} </p>
-              <button onClick={boleta} value={element.precio} name={element.name} className="btn btn-dark"> Agregar</button>
-            </div>
-          );
-        })}
+      <div className={styles.generalContainer}>
+        <div className={styles.breakfast}>
+          <div className={styles.containerLeft}>
+            {almuerzos.map((element, i) => {
+              console.log(element.name);
+              return (
+                <div className={styles.food}>
+                  <p>
+                    <img src={element.img} alt="" />
+                  </p>
+                  <p key={i}>{element.name} ${element.precio} </p>
+                  <button onClick={boleta} value={element.precio} name={element.name} className="btn btn-dark"> Agregar</button>
+                </div>
+              );
+            })}
+          </div>
+          <div className={styles.containerRight}>
+            <h1><ResumenPedido nombre={agregar} /></h1>
+          </div>
+        </div>
       </div>
+      <Bebestibles />
     </Fragment>
   );
 };

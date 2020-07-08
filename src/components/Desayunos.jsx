@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import styles from "../css/index.module.css";
 import data from "../menu/menu.json";
+import ResumenPedido from "./ResumenPedido";
+//import shortid from 'shortid';
 
 
 
@@ -23,7 +25,6 @@ const Desayuno = () => {
 
 
   let desayunos = data.Desayunos;
-
   return (
     <Fragment>
       <h1>Desayunos</h1>
@@ -31,20 +32,21 @@ const Desayuno = () => {
         <div className={styles.breakfast}>
           <div className={styles.containerLeft}>
             {desayunos.map((element, i) => {
-
+              //console.log(element.name);
               return (
                 <div className={styles.food}>
                   <p>
-                    <img src={element.img} />
+                    <img src={element.img} alt="" />
                   </p>
                   <p key={i}>{element.name} ${element.precio} </p>
                   <button onClick={boleta} value={element.precio} name={element.name} className="btn btn-dark"> Agregar</button>
                 </div>
-
               );
             })}
           </div>
-
+          <div className={styles.containerRight}>
+            <h1><ResumenPedido nombre={agregar} /></h1>
+          </div>
         </div>
       </div>
 

@@ -48,7 +48,9 @@ const Registro = () => {
         </div>
       </form>
       <h1>
-        {datos.mesero} - {datos.cliente}
+        Atendido por: {datos.mesero} 
+        <hr/>
+        Cliente: {datos.cliente}
       </h1>
     </Fragment>
   );
