@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./css/index.module.css";
+//import styles from "./css/index.module.css";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import { firebase } from "./firebase";
 import Menu from "./components/Menu";
