@@ -23,6 +23,7 @@ const Desayuno = () => {
     console.log(agregar);
   };
 
+  
 
   let desayunos = data.Desayunos;
   return (
@@ -42,14 +43,24 @@ const Desayuno = () => {
                   <button onClick={boleta} value={element.precio} name={element.name} className="btn btn-dark"> Agregar</button>
                 </div>
               );
-            })}
+            })
+  
+            }
           </div>
           <div className={styles.containerRight}>
-            <h1><ResumenPedido nombre={agregar} /></h1>
+            <h3>Resumen Pedido</h3>
+            {
+                agregar.map((element,i) => {
+                  return(
+                    <p key={i} >
+                <ResumenPedido nombre={element}/>
+                </p>
+                )
+                })
+            }
           </div>
         </div>
       </div>
-
 
     </Fragment>
   );
