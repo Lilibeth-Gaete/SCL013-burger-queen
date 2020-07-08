@@ -5,7 +5,7 @@ const Orden = () => {
     return (
         <Fragment>
             <div>
-                <h1>ORden</h1>
+                <h1>Orden</h1>
                 <Estados />
             </div>
 
