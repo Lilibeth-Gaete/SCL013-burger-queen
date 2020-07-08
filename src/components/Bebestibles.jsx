@@ -5,13 +5,19 @@ import data from "../menu/menu.json";
 
 const Bebestibles = () => {
 
+  const [agregar, setAgregar] = React.useState([]);
   const boleta = (e) => {
-
-    const precio = e.target.value;
-    const precioPedido = parseInt(precio);
-    console.log(precioPedido);
-    console.log(e.target.name);
-
+    console.log("Entro a la funcion")
+    const valor = e.target.value;
+    const precioPedido = parseInt(valor);
+    console.log(precioPedido)
+    //setPrecio(precioTotal + precioPedido);
+    const nombrePedido = e.target.name;
+    //  setPedido(nombrePedido);
+    console.log(nombrePedido);
+    agregar.push([`${nombrePedido} $${precioPedido}`]);
+    setAgregar([...agregar]);
+    console.log(agregar);
   };
 
   let bebestibles = data.Bebestibles;
