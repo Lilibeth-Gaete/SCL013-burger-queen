@@ -1,7 +1,12 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Desayunos from "./Desayunos";
+<<<<<<< HEAD
 import Almuerzos from "./Almuerzos"; 
+=======
+
+import Almuerzos from "./Almuerzos";
+>>>>>>> 83dbc9a2886c0e554dee8e4bd2f09152d611469d
 
 export const Item = () => {
     return (
