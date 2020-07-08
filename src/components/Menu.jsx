@@ -6,20 +6,11 @@ import Registro from "./Registro";
 import Desayunos from "./Desayunos";
 import Almuerzos from "./Almuerzos";
 import Bebestibles from "./Bebestibles";
+//import ResumenPedido from "./ResumenPedido";
 //import ReactDOM from 'react-dom'
 
 const Menu = () => {
- 
- const boleta = (e) => {
-    console.log(e.target.name);
-    const precio = e.target.value;
-    const precioPedido = parseInt(precio);
-    console.log(parseInt(precio));
-    // console.log(e.target.name);
-  };
- 
-
-
+  
   return (
     <Fragment>
       <Registro />
@@ -30,9 +21,6 @@ const Menu = () => {
        <Almuerzos />
        <Bebestibles />
        </div>
-        <div className={styles.containerRight}>
-          <h3>Resumen Pedido</h3>
-        </div>
       </div>
       </div>
     </Fragment>
