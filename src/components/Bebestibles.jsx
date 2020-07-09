@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import styles from "../css/index.module.css";
+import  "../css/index.css";
 import data from "../menu/menu.json";
 import ResumenPedido from "./ResumenPedido";
 
@@ -25,13 +25,13 @@ const Bebestibles = () => {
   return (
     <Fragment>
       <h1>Bebestibles</h1>
-      <div className={styles.generalContainer}>
-        <div className={styles.breakfast}>
-          <div className={styles.containerLeft}>
+      <div className="contenedorGeneral">
+        <div className="desayuno">
+          <div className="contenedorIzquierdo">
             {bebestibles.map((element, i) => {
               console.log(element.name);
               return (
-                <div className={styles.food}>
+                <div className="comida">
                   <p>
                     <img src={element.img} alt="" />
                   </p>
@@ -41,7 +41,7 @@ const Bebestibles = () => {
               );
             })}
           </div>
-          <div className={styles.containerRight}>
+          <div className="contenedorDerecho">
             <h1><ResumenPedido nombre={agregar} /></h1>
           </div>
         </div>

@@ -2,29 +2,28 @@ body {
   margin: 0;
   padding: 0;
   background: url("../img/fondo.jpg");
-  background-color:black;
+  background-color: black;
   background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
-h1{
+h1 {
   font-size: 25px;
   color: white;
-  margin:15px 20px 2px 20px;
+  margin: 15px 20px 2px 20px;
 }
 
-
-.generalContainer{
+.contenedorGeneral {
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: center;
   align-content: center;
-  
+
 }
 
-.breakfast {
+.desayuno {
   display: flex;
   justify-content: center;
   background: rgba(0, 0, 0, 0.45);
@@ -32,98 +31,103 @@ h1{
   width: 100%;
 }
 
-.DailyMenu{
+.menuDiario {
   display: flex;
   flex-direction: column;
 }
 
-.containerLeft {
+.contenedorIzquierdo {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   background: rgb(44, 44, 44);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  padding:20px;
+  padding: 20px;
   width: 80%;
   margin: 20px;
   margin-right: 0px;
 }
 
-.containerLeft p{
-  color:white;
+.contenedorIzquierdo p {
+  color: white;
   font-size: 14px;
-  margin-top:12px;
+  margin-top: 12px;
 }
 
-.containerLeft button{
+.contenedorIzquierdo button {
   font-size: 14px;
-  margin-bottom:30px;
+  margin-bottom: 30px;
 }
 
 h3 {
   color: white;
 }
 
-.containerRight {
+.contenedorDerecho {
   background: #E1B589;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  margin:12px;
-  margin-top:20px;
-  height:728px;
+  margin: 12px;
+  margin-top: 20px;
+  height: 728px;
   width: 50%;
 }
 
-.containerRight h3{
-color:rgb(32, 32, 32);
-text-align: center;
-margin:20px;
+.contenedorDerecho h3 {
+  color: rgb(32, 32, 32);
+  text-align: center;
+  margin: 20px;
 }
 
-.food{
+.comida {
   text-align: center;
-  margin:10px; 
-  }
+  margin: 10px;
+}
 
-.registerContainer input{
+.contenedorRegistro {
+  text-align: center;
+  margin: 10px;
+}
+
+.contenedorRegistro input {
   width: 350px;
 }
 
 
 @media screen and (max-width: 768px) {
 
-.food{
-text-align: center;
-margin:2px; 
-}
+  .comida {
+    text-align: center;
+    margin: 2px;
+  }
 
-.food p{
-  font-size: 12px;
-}
+  .comida p {
+    font-size: 12px;
+  }
 
-.containerLeft img{
-  width: 50%;
-  margin:5px;
-}
+  .contenedorIzquierdo img {
+    width: 50%;
+    margin: 5px;
+  }
 
-.containerLeft{
-  width: 82%;
-  margin-top: 20px;
-  margin-right: 0px;
-}
+  .contenedorIzquierdo {
+    width: 82%;
+    margin-top: 20px;
+    margin-right: 0px;
+  }
 
-.containerRight{
-  width: 50%;
-  margin:20px;
-}
+  .contenedorDerecho {
+    width: 50%;
+    margin: 20px;
+  }
 
-h1{
-  font-size:20px;
-  margin:10px 20px;
-}
+  h1 {
+    font-size: 20px;
+    margin: 10px 20px;
+  }
 
-.containerRight h3{
-  font-size: 18px;
+  .contenedorDerecho h3 {
+    font-size: 18px;
   }
 }

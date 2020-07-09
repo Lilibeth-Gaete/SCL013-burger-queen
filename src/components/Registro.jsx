@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from "react";
-import styles from "../css/index.module.css";
 
 const Registro = () => {
   //NOMBRE MESERO Y CLIENTE
