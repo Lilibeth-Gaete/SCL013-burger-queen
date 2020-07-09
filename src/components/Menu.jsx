@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import styles from "../css/index.module.css";
+import  "../css/index.css";
 //import data from "../menu/menu.json";
 import Registro from "./Registro";
 import Item from "./Item";
@@ -12,9 +12,9 @@ const Menu = () => {
 
     <Fragment>
       <Registro />
-      <div className={styles.generalContainer}>
-        <div className={styles.breakfast}>
-          <div className={styles.DailyMenu}>
+      <div className="contenedorGeneral">
+        <div className="desayuno">
+          <div className="menuDiario">
             <Item />
           </div>
         </div>
