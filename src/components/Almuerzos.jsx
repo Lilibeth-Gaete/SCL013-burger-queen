@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import  "../css/index.css";
 import data from "../menu/menu.json";
 import ResumenPedido from "./ResumenPedido";
-import Bebestibles from "./Bebestibles";
+//import Bebestibles from "./Bebestibles";
 
 
 const Almuerzos = () => {
@@ -71,7 +71,6 @@ const Almuerzos = () => {
           </div>
         </div>
       </div>
-      <Bebestibles />
     </Fragment>
   );
 };
