@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+/*import React, { Fragment } from "react";
 import  "../css/index.css";
 import data from "../menu/menu.json";
 import ResumenPedido from "./ResumenPedido";
@@ -50,4 +50,4 @@ const Bebestibles = () => {
   );
 };
 
-export default Bebestibles;
+export default Bebestibles;*/
