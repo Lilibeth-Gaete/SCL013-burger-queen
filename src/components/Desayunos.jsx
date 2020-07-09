@@ -5,25 +5,33 @@ import ResumenPedido from "./ResumenPedido";
 //import shortid from 'shortid';
 
 
-
 const Desayuno = () => {
-
+  const [precioTotal, setPrecioTotal] = React.useState([]);
   const [agregar, setAgregar] = React.useState([]);
+  let [suma, setSuma] = React.useState();
+
   const boleta = (e) => {
     console.log("Entro a la funcion")
+    //valor de cada producto
     const valor = e.target.value;
     const precioPedido = parseInt(valor);
-    console.log(precioPedido)
-    //setPrecio(precioTotal + precioPedido);
+
+    //suma de precios
+    precioTotal.push(precioPedido)
+    setPrecioTotal([...precioTotal])
+
+    //nombre del pedido
     const nombrePedido = e.target.name;
-    //  setPedido(nombrePedido);
-    console.log(nombrePedido);
+
+    //acumulacion de pedido
     agregar.push([`${nombrePedido} $${precioPedido}`]);
     setAgregar([...agregar]);
     console.log(agregar);
+
+
   };
 
-  
+  suma = precioTotal.reduce((acc, el) => acc + el, 0);
 
   let desayunos = data.Desayunos;
   return (
@@ -44,20 +52,24 @@ const Desayuno = () => {
                 </div>
               );
             })
-  
+
             }
           </div>
           <div className={styles.containerRight}>
             <h3>Resumen Pedido</h3>
             {
-                agregar.map((element,i) => {
-                  return(
-                    <p key={i} >
-                <ResumenPedido nombre={element}/>
-                </p>
+              agregar.map((element, i) => {
+                return (
+                  <p key={i} >
+                    <ResumenPedido nombre={element} />
+                  </p>
                 )
-                })
+              })
             }
+            <h1>Total= ${suma}</h1>
+            <button className="btn btn-dark" type="submit">
+              Enviar
+            </button>
           </div>
         </div>
       </div>
