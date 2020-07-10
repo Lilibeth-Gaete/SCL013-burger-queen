@@ -6,8 +6,8 @@ import logo from "../img/logo.png"
 const Inicio = () => {
     return (
         <Fragment>
-            <img src={logo} className="logoPrincipal" />
-            <Link to="/menu" className="btn btn-dark btn-block" >Entrar</Link>
+            <img src={logo} className="logoPrincipal" alt=""/>
+            <Link to="/menu" className="btn btn-dark btn-block">Entrar</Link>
         </Fragment>
     )
 }

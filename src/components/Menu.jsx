@@ -18,13 +18,7 @@ const Menu = () => {
         <Link to="/orden" className="btn btn-dark">Orden</Link>
       </div>
       <Registro />
-      <div className="contenedorGeneral">
-        <div className="desayuno">
-          <div className="menuDiario">
-            <Item />
-          </div>
-        </div>
-      </div>
+       <Item />
     </Fragment>
 
 
