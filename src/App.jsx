@@ -31,12 +31,7 @@ function App() {
     <div>
       <Router >
         <div className="container mt-5">
-          <div className="btn-group">
-            { /* <Link to="/menu" className="btn btn-dark">Menu</Link>*/}
-            {/* <Link to="/orden" className="btn btn-dark">Orden</Link> */}
-          </div>
           <Switch>
-
             < Route exact path="/">
               <Inicio />
             </Route>
@@ -49,7 +44,6 @@ function App() {
           </Switch>
         </div>
       </Router>
-
     </div>
   );
 }
