@@ -3,7 +3,7 @@ import Estados from './Estados';
 import { db } from "../firebase";
 import { Link } from "react-router-dom";
 
-const Orden = () => {
+const Cocina = () => {
 
     const [tareas, setTareas] = React.useState([])
 
@@ -28,11 +28,12 @@ const Orden = () => {
         <Fragment>
             <div className="btn-group">
         <Link to="/menu" className="btn btn-dark">Menu</Link>
-        <Link to="/orden" className="btn btn-dark">Orden</Link>
+        <Link to="/Cocina" className="btn btn-dark">Cocina</Link>
+        <Link to="/EstadoComandas" className="btn btn-dark">Estado comandas</Link>
       </div>
             {
                 tareas.map(item => (
-                    <li key={item.id} className="listaOrden">
+                    <li key={item.id} className="listaCocina">
                         <span >{item.pedido}</span>
 
                     </li>
@@ -42,4 +43,4 @@ const Orden = () => {
     )
 }
 
-export default Orden;
+export default Cocina;
