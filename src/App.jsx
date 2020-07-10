@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import { firebase } from "./firebase";
 import Menu from "./components/Menu";
 import Orden from "./components/Orden";
+import Registro from "./components/Registro";
 
 function App() {
   React.useEffect(() => {
@@ -25,7 +26,7 @@ function App() {
   return (
     <div>
       <Router >
-        <div className="container mt-5">
+        <div className="container mt-3 mr-2">
           <div className="btn-group">
             <Link to="/menu" className="btn btn-dark">Menu</Link>
             <Link to="/orden" className="btn btn-dark">Orden</Link>

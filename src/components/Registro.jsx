@@ -20,37 +20,33 @@ const Registro = () => {
 
   return (
     <Fragment>
-      <h1>Datos</h1>
-      <form className="row" onSubmit={enviarDatos}>
-        <div className="col-md-3">
+      <form className="row mt-3" onSubmit={enviarDatos}>
+        <div className="col">
           <input
             placeholder="nombre mesero"
-            className="form-control"
+            className="form-control form-control-sm"
             type="text"
             name="mesero"
             onChange={handleInputChange}
           ></input>
+          <p> Atendido por: {datos.mesero} </p>
         </div>
         <div className="col-md-3">
           <input
             placeholder="nombre cliente"
-            className="form-control"
+            className="form-control form-control-sm"
             type="text"
             name="cliente"
             onChange={handleInputChange}
           ></input>
+          <p> Cliente: {datos.cliente}</p>
         </div>
         <div className="col-md-3">
-          <button className="btn btn-primary" type="submit">
+          <button className="btn btn-dark" type="submit">
             Enviar
           </button>
         </div>
       </form>
-      <h1>
-        Atendido por: {datos.mesero} 
-        <hr/>
-        Cliente: {datos.cliente}
-      </h1>
     </Fragment>
   );
 };

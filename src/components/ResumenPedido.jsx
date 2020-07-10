@@ -10,8 +10,6 @@ const ResumenPedido = (props) => {
                 <li>{props.nombre}</li>
                 <p>{props.total} </p>
             </ul>
-
-
         </Fragment>
 
 

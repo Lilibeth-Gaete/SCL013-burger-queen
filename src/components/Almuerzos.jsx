@@ -36,7 +36,6 @@ const Almuerzos = () => {
   console.log(almuerzos);
   return (
     <Fragment>
-      <h1>Almuerzos</h1>
       <div className="contenedorGeneral">
         <div className="desayuno">
           <div className="contenedorIzquierdo">
@@ -65,9 +64,11 @@ const Almuerzos = () => {
               })
             }
             <h1>Total= ${suma}</h1>
+            <div className="btnEnviar">
             <button className="btn btn-dark" type="submit">
-              Enviar
+             Enviar
             </button>
+            </div>
           </div>
         </div>
       </div>

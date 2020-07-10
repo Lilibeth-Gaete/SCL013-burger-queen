@@ -11,14 +11,8 @@ const Menu = () => {
   return (
 
     <Fragment>
-      <Registro />
-      <div className="contenedorGeneral">
-        <div className="desayuno">
-          <div className="menuDiario">
-            <Item />
-          </div>
-        </div>
-      </div>
+       <Registro />
+       <Item />
     </Fragment>
 
 

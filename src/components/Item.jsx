@@ -9,23 +9,23 @@ export const Item = () => {
         <Fragment>
             <div>
                 <Router >
-                    <div className="container mt-5">
+                    <div className="container mt-2">
                         <div className="btn-group">
                             <Link to="/Desayunos" className="btn btn-dark">Desayunos</Link>
-                            <Link to="/Almuerzos" className="btn btn-dark">Almuerzos</Link>
+                            <Link to="/Almuerzos" className="btn btn-dark">Almuerzos y Bebestibles</Link>
                         </div>
                         <Switch>
-                            <Route path="/Desayunos">
+                            <Route path="/Desayunos" exact>
                                 <Desayunos />
                             </Route>
-                            <Route path="/Almuerzos">
+                            <Route path="/Almuerzos" exact>
                                 <Almuerzos />
                             </Route>
                         </Switch>
                     </div>
                 </Router>
             </div>
-            <h1>Elija un item para tomar la orden</h1>        </Fragment>
+    </Fragment>
     )
 }
 export default Item;
