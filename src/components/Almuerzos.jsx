@@ -63,7 +63,7 @@ const Almuerzos = () => {
                 )
               })
             }
-            <h1>Total= ${suma}</h1>
+            <h3>Total= ${suma}</h3>
             <div className="btnEnviar">
             <button className="btn btn-dark" type="submit">
              Enviar

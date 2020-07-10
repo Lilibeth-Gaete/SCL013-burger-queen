@@ -6,7 +6,7 @@ const ResumenPedido = (props) => {
     return (
 
         <Fragment>
-            <ul>
+            <ul className="pedido">
                 <li>{props.nombre}</li>
                 <p>{props.total} </p>
             </ul>

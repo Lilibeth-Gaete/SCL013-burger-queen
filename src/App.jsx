@@ -26,10 +26,10 @@ function App() {
   return (
     <div>
       <Router >
-        <div className="container mt-3 mr-2">
-          <div className="btn-group">
-            <Link to="/menu" className="btn btn-dark">Menu</Link>
-            <Link to="/orden" className="btn btn-dark">Orden</Link>
+        <div className="container mt-3">
+          <div className="btnMenu">
+            <Link to="/menu" className="btn btn-dark" >Menu</Link>
+            <Link to="/orden" className="btn btn-dark " >Orden</Link>
           </div>
           <Switch>
             <Route path="/menu">

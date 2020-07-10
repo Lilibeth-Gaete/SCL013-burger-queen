@@ -11,7 +11,7 @@ const Menu = () => {
   return (
 
     <Fragment>
-       <Registro />
+      <Registro />
        <Item />
     </Fragment>
 

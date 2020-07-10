@@ -31,7 +31,7 @@ const Registro = () => {
           ></input>
           <p> Atendido por: {datos.mesero} </p>
         </div>
-        <div className="col-md-3">
+        <div className="col">
           <input
             placeholder="nombre cliente"
             className="form-control form-control-sm"
@@ -41,7 +41,7 @@ const Registro = () => {
           ></input>
           <p> Cliente: {datos.cliente}</p>
         </div>
-        <div className="col-md-3">
+        <div className="col">
           <button className="btn btn-dark" type="submit">
             Enviar
           </button>
