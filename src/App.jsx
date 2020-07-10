@@ -1,36 +1,45 @@
 import React from "react";
 //import styles from "./css/index.module.css";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
-import { firebase } from "./firebase";
+//import { db } from "./firebase";
 import Menu from "./components/Menu";
 import Orden from "./components/Orden";
+import Inicio from "./components/Inicio";
 
 function App() {
-  React.useEffect(() => {
-    const obtenerDatos = async () => {
-      var db = firebase.firestore();
+  /* const [tareas, setTareas] = React.useState([])
+ 
+   React.useEffect(() => {
+ 
+     const obtenerDatos = async () => {
+ 
+       try {
+         const data = await db.collection('pedidos').get()
+         const arrayData = data.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+         console.log(arrayData)
+         setTareas(arrayData)
+       } catch (error) {
+         console.log(error)
+       }
+     }
+     obtenerDatos()
+ 
+   }, [])*/
 
-      db.collection("pedidos")
-        .get()
-        .then((querySnapshot) => {
-          querySnapshot.forEach((doc) => {
-            console.log(`${doc.data} => ${doc.data().bebestible}`);
-          });
-        });
-    };
-
-    obtenerDatos();
-  }, []);
 
   return (
     <div>
       <Router >
         <div className="container mt-5">
           <div className="btn-group">
-            <Link to="/menu" className="btn btn-dark">Menu</Link>
-            <Link to="/orden" className="btn btn-dark">Orden</Link>
+            { /* <Link to="/menu" className="btn btn-dark">Menu</Link>*/}
+            {/* <Link to="/orden" className="btn btn-dark">Orden</Link> */}
           </div>
           <Switch>
+
+            < Route exact path="/">
+              <Inicio />
+            </Route>
             <Route path="/menu">
               <Menu />
             </Route>
@@ -40,6 +49,7 @@ function App() {
           </Switch>
         </div>
       </Router>
+
     </div>
   );
 }

@@ -1,14 +1,15 @@
 import React, { Fragment } from "react";
-import  "../css/index.css";
+import "../css/index.css";
 import data from "../menu/menu.json";
 import ResumenPedido from "./ResumenPedido";
+import { db } from "../firebase"
 //import shortid from 'shortid';
 
 
 const Desayuno = () => {
   const [precioTotal, setPrecioTotal] = React.useState([]);
   const [agregar, setAgregar] = React.useState([]);
-  let [suma, setSuma] = React.useState();
+  let [suma] = React.useState();
 
   const boleta = (e) => {
     console.log("Entro a la funcion")
@@ -24,12 +25,27 @@ const Desayuno = () => {
     const nombrePedido = e.target.name;
 
     //acumulacion de pedido
-    agregar.push([`${nombrePedido} $${precioPedido}`]);
+    agregar.push(`${nombrePedido} $${precioPedido}`);
     setAgregar([...agregar]);
-    console.log(agregar);
-
+    console.log("holi", agregar);
 
   };
+
+  const agregarFirebase = async (e) => {
+    e.preventDefault()
+    try {
+      const nuevoPedido = {
+        pedido: agregar
+
+      }
+      const data = await db.collection("pedidos").add(nuevoPedido);
+    } catch (error) {
+      console.log(error)
+    }
+    console.log(agregar)
+
+
+  }
 
   suma = precioTotal.reduce((acc, el) => acc + el, 0);
 
@@ -48,9 +64,13 @@ const Desayuno = () => {
                     <img src={element.img} alt="" />
                   </p>
                   <p key={i}>{element.name} ${element.precio} </p>
-                  <button onClick={boleta} value={element.precio} name={element.name} className="btn btn-dark"> Agregar</button>
+                  <button onClick={boleta} value={element.precio} name={element.name} className="btn btn-dark"
+                  > Agregar</button>
+
                 </div>
+
               );
+
             })
 
             }
@@ -67,7 +87,7 @@ const Desayuno = () => {
               })
             }
             <h1>Total= ${suma}</h1>
-            <button className="btn btn-dark" type="submit">
+            <button className="btn btn-dark" type="submit" onClick={agregarFirebase} >
               Enviar
             </button>
           </div>

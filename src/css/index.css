@@ -94,6 +94,16 @@ h3 {
   width: 350px;
 }
 
+.logoPrincipal {
+  width: 50%;
+
+}
+
+.listaOrden {
+  color: antiquewhite;
+  border-style: solid;
+  border-color: yellow;
+}
 
 @media screen and (max-width: 768px) {
 
