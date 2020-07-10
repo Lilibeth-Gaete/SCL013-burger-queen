@@ -1,8 +1,7 @@
 import React, { Fragment, useState } from "react";
 
 const Registro = () => {
-  //NOMBRE MESERO Y CLIENTE
-
+ 
   const [datos, setDatos] = useState({
     mesero: "",
     cliente: "",

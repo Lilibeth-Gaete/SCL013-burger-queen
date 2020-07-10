@@ -131,9 +131,6 @@ margin:10px;
   margin-left: 20px;
 }
 
-.logoPrincipal{
-  width: 45%;
-}
 @media screen and (max-width: 768px) {
 
   .comida {
