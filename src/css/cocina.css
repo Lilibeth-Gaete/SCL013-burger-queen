@@ -1,0 +1,35 @@
+.contenedorLista {
+  width: 280px;
+  padding: 15px;
+  height: auto;
+  background: rgb(23, 23, 24);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 10px;
+  margin-left: 0px;
+  border-radius: 10px;
+  list-style: none;
+}
+
+.contenedorCocina h3 {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: lighter;
+}
+
+.contenedorLista span {
+  margin-top:10px;
+  color: white;
+  font-size: 15px;
+}
+
+.contenedorCocina p {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.contenedorLista .btn.btn-success.btn-sm {
+  margin-left: 80%;
+  background-color: #4D5A06;
+  border-style: none;
+}

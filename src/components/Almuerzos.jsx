@@ -80,9 +80,9 @@ const Almuerzos = () => {
                 )
               })
             }
-            <h1>Total= ${suma}</h1>
+            <p>Total= ${suma}</p>
             <div className="btnEnviar">
-            <button className="btn btn-dark" type="submit" onClick={agregarFirebase} >
+            <button className="btn btn-dark btn-sm" type="submit" onClick={agregarFirebase} >
               Enviar
             </button>
             </div>

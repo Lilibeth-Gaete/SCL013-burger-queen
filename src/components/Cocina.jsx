@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react'
-import Estados from './Estados';
+import EstadoComandas from './Estados';
 import { db } from "../firebase";
 import { Link } from "react-router-dom";
+import '../css/cocina.css';
 
 const Cocina = () => {
 
@@ -31,14 +32,22 @@ const Cocina = () => {
         <Link to="/Cocina" className="btn btn-dark">Cocina</Link>
         <Link to="/EstadoComandas" className="btn btn-dark">Estado comandas</Link>
       </div>
-            {
-                tareas.map(item => (
-                    <li key={item.id} className="listaCocina">
-                        <span >{item.pedido}</span>
-
-                    </li>
-                ))
-            }
+      <div className="contenedorCocina">
+      <h3>Resumen Pedido</h3>
+                {
+                    tareas.map(item => (
+                        <li className="contenedorLista">
+                            <span  >
+                                {item.pedido.map(elemento => (
+                                    <li> {elemento}  </li>
+                                ))}</span>
+                                <p>Total : $ {item.total}</p>
+                                <button className="btn btn-success btn-sm">Listo</button>
+                        </li>
+                    ))
+                
+                }
+            </div>
         </Fragment>
     )
 }

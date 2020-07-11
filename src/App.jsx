@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Router >
-        <div className="container mt-5">
+        <div className="container mt-4">
           <Switch>
             < Route exact path="/">
               <Inicio />
