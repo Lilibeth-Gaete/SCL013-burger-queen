@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import "../css/index.css";
-import Registro from "./Registro";
 import Item from "./Item";
 import { Link } from "react-router-dom";
 
