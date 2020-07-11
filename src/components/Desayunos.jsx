@@ -6,7 +6,7 @@ import { db } from "../firebase"
 //import shortid from 'shortid';
 
 
-const Desayuno = () => {
+const Desayuno = (props) => {
   const [precioTotal, setPrecioTotal] = React.useState([]);
   const [agregar, setAgregar] = React.useState([]);
   let [suma] = React.useState();
@@ -35,8 +35,10 @@ const Desayuno = () => {
     e.preventDefault()
     try {
       const nuevoPedido = {
-        pedido: agregar
-
+        mesero: props.nombreMesero,
+        cliente: props.nombreCliente,
+        pedido: agregar,
+        total: suma
       }
       const data = await db.collection("pedidos").add(nuevoPedido);
     } catch (error) {
@@ -85,8 +87,8 @@ const Desayuno = () => {
             }
             <p>Total= ${suma}</p>
             <div className="btnEnviar">
-            <button className="btn btn-dark btn-sm" type="submit" onClick={agregarFirebase} >
-              Enviar
+              <button className="btn btn-dark btn-sm" type="submit" onClick={agregarFirebase} >
+                Enviar
             </button>
             </div>
           </div>

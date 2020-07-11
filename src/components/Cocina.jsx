@@ -28,24 +28,27 @@ const Cocina = () => {
     return (
         <Fragment>
             <div className="btn-group">
-        <Link to="/menu" className="btn btn-dark">Menu</Link>
-        <Link to="/Cocina" className="btn btn-dark">Cocina</Link>
-        <Link to="/EstadoComandas" className="btn btn-dark">Estado comandas</Link>
-      </div>
-      <div className="contenedorCocina">
-      <h3>Resumen Pedido</h3>
+                <Link to="/menu" className="btn btn-dark">Menu</Link>
+                <Link to="/Cocina" className="btn btn-dark">Cocina</Link>
+                <Link to="/EstadoComandas" className="btn btn-dark">Estado comandas</Link>
+            </div>
+            <div className="contenedorCocina">
+                <h3>Resumen Pedido</h3>
                 {
                     tareas.map(item => (
                         <li className="contenedorLista">
+                            <p>Mesero: {item.mesero}</p>
+                            <p>Cliente: {item.cliente} </p>
                             <span  >
+                                <h5>Pedido</h5>
                                 {item.pedido.map(elemento => (
                                     <li> {elemento}  </li>
                                 ))}</span>
-                                <p>Total : $ {item.total}</p>
-                                <button className="btn btn-success btn-sm">Listo</button>
+                            <p>Total : $ {item.total}</p>
+                            <button className="btn btn-success btn-sm">Listo</button>
                         </li>
                     ))
-                
+
                 }
             </div>
         </Fragment>
