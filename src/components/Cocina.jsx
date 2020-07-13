@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import EstadoComandas from './Estados';
 import { db } from "../firebase";
 import { Link } from "react-router-dom";
 import '../css/cocina.css';
@@ -42,7 +41,7 @@ const Cocina = () => {
                             <span  >
                                 <h5>Pedido</h5>
                                 {item.pedido.map(elemento => (
-                                    <li> {elemento}  </li>
+                                    <li> {elemento.nombrePedido} </li>
                                 ))}</span>
                             <p>Total : $ {item.total}</p>
                             <button className="btn btn-success btn-sm">Listo</button>

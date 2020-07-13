@@ -4,12 +4,13 @@ const ResumenPedido = (props) => {
 
     return (
 
-        <Fragment>
+        < Fragment >
+
             <ul className="pedido">
-                <li>{props.nombre}</li>
-                <p>{props.total} </p>
+                <li>{props.nombre.nombrePedido} $ {props.nombre.precio}</li>
+                <p> </p>
             </ul>
-        </Fragment>
+        </Fragment >
 
 
     )

@@ -9,7 +9,7 @@ import { db } from "../firebase"
 const Almuerzos = (props) => {
   const [precioTotal, setPrecioTotal] = React.useState([]);
   const [agregar, setAgregar] = React.useState([]);
-  let [suma, setSuma] = React.useState();
+  let [suma] = React.useState();
 
   const boleta = (e) => {
     console.log("Entro a la funcion")
@@ -25,7 +25,12 @@ const Almuerzos = (props) => {
     const nombrePedido = e.target.name;
 
     //acumulacion de pedido
-    agregar.push(`${nombrePedido} $${precioPedido}`);
+    agregar.push(
+      {
+        "nombrePedido": nombrePedido,
+        "precio": precioPedido
+      }
+    );
     setAgregar([...agregar]);
     console.log(agregar);
 
@@ -52,6 +57,31 @@ const Almuerzos = (props) => {
   }
 
   suma = precioTotal.reduce((acc, el) => acc + el, 0);
+  const eliminar = (element) => {
+
+    console.log("element", element)
+    const index = agregar.indexOf(element)
+    console.log("index", index)
+
+    //se eliminar el nombre y precio del arreglo(boleta)
+    const algo = agregar.splice(index, 1)
+    console.log(algo)
+
+    console.log("splice del precio", algo[0]["precio"]);
+    const numero = algo[0]["precio"];
+    console.log("precioo a eliminar", numero);
+
+    //se actualiza la informacion de agregar
+    setAgregar([...agregar])
+
+    //se eliminar el precio del arreglo precioTotal
+    precioTotal.splice(index, 1)
+
+    //console.log("eliminando", eliminar); y debajo de agregar p. } 
+
+    console.log("total actualizado!! ", precioTotal)
+    console.log(suma)
+  }
 
   let almuerzos = data.Almuerzos;
   return (
@@ -79,11 +109,12 @@ const Almuerzos = (props) => {
                 return (
                   <p key={i} >
                     <ResumenPedido nombre={element} />
+                    <button onClick={eliminar} nombre={agregar} value={i} name={agregar.precio} className="btn btn-danger">X</button>
                   </p>
                 )
               })
             }
-            <p>Total= ${suma}</p>
+            <h6>Total= ${suma}</h6>
             <div className="btnEnviar">
               <button className="btn btn-dark btn-sm" type="submit" onClick={agregarFirebase} >
                 Enviar

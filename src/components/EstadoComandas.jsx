@@ -1,16 +1,53 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react'
+import { db } from "../firebase";
 import { Link } from "react-router-dom";
+import '../css/cocina.css';
 
-export const EstadoComandas = () => {
-    return (
-        <Fragment>
-         <div className="btn-group">
+const Cocina = () => {
+  const [tareas, setTareas] = React.useState([])
+  // const [edicion, setEdicion] = React.useState(false)
+  React.useEffect(() => {
+    const obtenerDatos = async () => {
+      try {
+        const data = await db.collection('pedidos').get()
+        const arrayData = data.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+        console.log(arrayData)
+        setTareas(arrayData)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    obtenerDatos()
+  }, [])
+  return (
+    <Fragment>
+      <div className="btn-group">
         <Link to="/menu" className="btn btn-dark">Menu</Link>
         <Link to="/Cocina" className="btn btn-dark">Cocina</Link>
         <Link to="/EstadoComandas" className="btn btn-dark">Estado comandas</Link>
       </div>
-        </Fragment>
-    )
+      <div className="contenedorCocina">
+        <h3>Para Entregar</h3>
+        {
+          tareas.map(item => (
+            <div className="contenedorPrincipal">
+              <div className="contenedorLista">
+                <p>Mesero: {item.mesero}</p>
+                <p>Cliente: {item.cliente} </p>
+                <span  >
+                  <h5>Pedido</h5>
+                  {item.pedido.map(elemento => (
+                    <li key={item.id}> {elemento.nombrePedido} ${elemento.precio}  </li>
+                  ))}</span>
+                <p>Total : $ {item.total}</p>
+                <button className="btn btn-primary btn-sm">
+                  Entregar</button>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </Fragment>
+  )
 }
-
-export default EstadoComandas;
+export default Cocina;
