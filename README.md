@@ -1,4 +1,4 @@
-![imagen] (/src/img/logo.jpg)
+ ![imagen mostrar](/src/img/Logo.jpg)
 
 # Las Cabras, comida chilena
 
@@ -33,8 +33,8 @@ La segunda categoría es Almuerzos, en donde tenemos la mejor selección de plat
 A continuacion se puede ver el detalle de ambos menu:
 
 
-![imagen a mostrar] (src/img/menuDesayuno.jpg)
-![imagen a mostrar] (src/img/menuAlmuerzo.jpg)
+![imagen a mostrar](src/img/menuDesayuno.jpg)
+![imagen a mostrar](src/img/menuAlmuerzo.jpg)
 
 Nuestros clientes podrán cambiar de parecer al elegir un plato, por lo que se podrá editar la comanda cuantas veces lo requiera antes de finalizarla.
 
@@ -63,15 +63,15 @@ A continuacion visualizaremos el diseño inicial de la aplicación.
 Menu principal: La paleta de colores era en un inicio negro con naranjo/damasco, sin embargo al llevar a cabo el proyecto nos dimos cuenta que las imagenes de los alimentos ya contenian demasiada informacion visual, por lo que se sugirió un cambio de colores, dejando algo mas neutro y menos cargado. 
 Después de probar varios estilos de fondo, nos quedamos con el negro pizarra, que combina muy bien con la temática escogida y con ingredientes naturales, tales como los de nuestros platos chilenos.
 
-![menuPrincipal mostrar] (src/img/menuPrincipalDesign.jpg)
+![menuPrincipal mostrar](src/img/menuPrincipalDesign.jpg)
 
 Cocina: Para la seccion del Cocinero se cambio el nombre de la pestaña Orden a Cocina, para que sea más entendible, en esta sección tambien los colores variaron respecto al diseño original pero manteniendo la facilidad de manejo al usuario, en este caso, el Jefe de cocina. Las ordenes se agrupan por orden de llegada y con la comanda muy bien especificada.
 
-![cocina mostrar] (src/img/cocina.jpg)
+![cocina mostrar](src/img/cocina.jpg)
 
 Estado de la comanda: Para finalizar el diseño de alta fidelidad incluimos un apartado para estado de la comanda, inicialmente llamado Orden Lista, se cambio el nombre para entregar congruencia al lenguaje gastronómico. En esta sección se puede ver la hora de salida del plato para que sea entregado a los comensales y una vez finalizado este proceso se puede marcar con el boton "Entregado". La paleta de colores también varió y se opto por colores mas sobrios.
 
-![estadoComanda mostrar] (src/img/estadoComanda.jpg)
+![estadoComanda mostrar](src/img/estadoComanda.jpg)
 
 
 # Historias de usuario
@@ -121,17 +121,17 @@ rápidamente a los clientes que las hicieron.
 
 Para concretar el proyecto se hizo algunos cambios en la paleta de colores, prefiriendo un diseño mas sobrio y con la menor cantidad de botones posible para que la interacción sea mas rápida y fluida a la hora de tomar la orden, a continuación se muestra las distintas vistas de la aplicación
 
-![portada mostrar] (src/img/portada.jpg)
+![portada mostrar](src/img/portada.jpg)
 
-![desayuno mostrar] (src/img/desayuno.jpg)
+![desayuno mostrar](src/img/desayuno.jpg)
 
-![almuerzo mostrar] (src/img/almuerzo.jpg)
+![almuerzo mostrar](src/img/almuerzo.jpg)
 
-![cocina mostrar] (src/img/cocinafinal.jpg)
+![cocina mostrar](src/img/cocinafinal.jpg)
 
-![comandas mostrar] (src/img/comandas.jpg)
+![comandas mostrar](src/img/comandas.jpg)
 
-![comandas mostrar] (src/img/comandas.jpg)
+![comandas mostrar](src/img/comandas.jpg)
 
 #Libreria utilizada
 
@@ -157,9 +157,9 @@ los que trabajes.
 
 # Autoras
 
-* Fernanda Montecinos (https://https://github.com/montecinosc)
-* Lilibeth Gaete (https://https://github.com/Lilibeth-Gaete)
-* Bárbara Madariaga (https://https://github.com/BarbaraMV)
+* Fernanda Montecinos(https://https://github.com/montecinosc)
+* Lilibeth Gaete(https://https://github.com/Lilibeth-Gaete)
+* Bárbara Madariaga(https://https://github.com/BarbaraMV)
 
 Gracias por su atención.
 
