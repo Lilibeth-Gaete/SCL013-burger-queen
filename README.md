@@ -131,9 +131,8 @@ Para concretar el proyecto se hizo algunos cambios en la paleta de colores, pref
 
 ![comandas mostrar](src/img/comandas.jpg)
 
-![comandas mostrar](src/img/comandas.jpg)
 
-#Libreria utilizada
+# Libreria utilizada
 
 [React](https://es.reactjs.org/) es una _librería_ de JavaScript más utilizados por
 lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
