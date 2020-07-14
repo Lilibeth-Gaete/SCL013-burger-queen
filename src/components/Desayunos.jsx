@@ -10,9 +10,9 @@ const Desayuno = (props) => {
   const [precioTotal, setPrecioTotal] = React.useState([]);
   const [agregar, setAgregar] = React.useState([]);
   let [suma] = React.useState();
+  const [pendiente] = React.useState("Pendiente")
 
   const boleta = (e) => {
-    console.log("Entro a la funcion")
     //valor de cada producto
     const valor = e.target.value;
     const precioPedido = parseInt(valor);
@@ -43,7 +43,10 @@ const Desayuno = (props) => {
         mesero: props.nombreMesero,
         cliente: props.nombreCliente,
         pedido: agregar,
-        total: suma
+        total: suma,
+        fecha: Date.now(),
+        estado: pendiente
+
 
       }
       const data = await db.collection("pedidos").add(nuevoPedido);
@@ -57,31 +60,17 @@ const Desayuno = (props) => {
 
   suma = precioTotal.reduce((acc, el) => acc + el, 0);
 
-  const eliminar = (element) => {
+  const eliminar = (e) => {
 
-    console.log("element", element)
-    const index = agregar.indexOf(element)
-    console.log("index", index)
-
-    //se eliminar el nombre y precio del arreglo(boleta)
-    const algo = agregar.splice(index, 1)
-    console.log(algo)
-
-    console.log("splice del precio", algo[0]["precio"]);
-    const numero = algo[0]["precio"];
-    console.log("precioo a eliminar", numero);
-
-    //se actualiza la informacion de agregar
+    const posicion = e.target.value;
+    console.log("posicion01", posicion)
+    agregar.splice(posicion, 1)
     setAgregar([...agregar])
+    console.log("agreganddo",agregar)
+    precioTotal.splice(posicion, 1)
 
-    //se eliminar el precio del arreglo precioTotal
-    precioTotal.splice(index, 1)
-
-    //console.log("eliminando", eliminar); y debajo de agregar p. } 
-
-    console.log("total actualizado!! ", precioTotal)
-    console.log(suma)
   }
+
   let desayunos = data.Desayunos;
   return (
     <Fragment>
@@ -91,7 +80,7 @@ const Desayuno = (props) => {
             {desayunos.map((element, i) => {
               //console.log(element.name);
               return (
-                <div className="comida">
+                <div key={i} className="comida">
                   <p>
                     <img src={element.img} alt="" />
                   </p>
@@ -109,12 +98,11 @@ const Desayuno = (props) => {
             <h3>Resumen Pedido</h3>
             {
               agregar.map((element, i) => {
+               console.log("este es mi element", element)
                 return (
-                  <p key={i} >
-                    <ResumenPedido nombre={element} />
-                    {console.log("aqui precio", element.precio)}
-                    <button onClick={eliminar} nombre={agregar} value={i} name={agregar.precio} className="btn btn-danger">X</button>
-                  </p>
+                  <ul key={element.id} className="pedido" >
+                    <button onClick={eliminar} nombre={element} value={i} className="btn btn-dark btn-sm">x</button><ResumenPedido nombre={element}/> 
+                  </ul>
                 )
               })
             }

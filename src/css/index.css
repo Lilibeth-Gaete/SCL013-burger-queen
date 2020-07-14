@@ -80,9 +80,14 @@ h3 {
   width: 50%;
 }
 
-.contenedorDerecho h6 {
-  margin-left: 90px;
+.contenedorDerecho p{
+  margin-left:70px;
   font-size: 20px;
+}
+
+.contenedorDerecho h6 {
+  margin-left: 65px;
+  font-size: 19px;
   color: grey;
 }
 
@@ -123,6 +128,13 @@ h3 {
   font-size: 18px;
 }
 
+.pedido li{
+  font-size: 18px;
+  list-style: none;
+  margin-top: -22px;
+  margin-left:36px;
+}
+
 .btnMenu {
   display: flex;
   flex-direction: row;
@@ -138,7 +150,6 @@ h3 {
 .container.mt-2 {
   padding-left: 0px;
 }
-
 
 @media screen and (max-width: 768px) {
 
@@ -165,7 +176,7 @@ h3 {
   }
 
   .contenedorDerecho {
-    width: 50%;
+    width: 62%;
     margin: 20px;
     height: auto;
   }
@@ -176,17 +187,24 @@ h3 {
 
   .contenedorDerecho p {
     margin-left: 20px;
-    font-size: 16px;
+    font-size: 14px;
+    list-style: none;
   }
 
   .contenedorDerecho h6 {
-    margin-left: 40px;
+    margin-left: 57px;
     color: grey;
+    font-size: 18px;
   }
 
   h1 {
     font-size: 20px;
     margin: 10px 20px;
+  }
+
+  .pedido li{
+    margin-left:36px;
+    font-size: 16px;
   }
 
 }
