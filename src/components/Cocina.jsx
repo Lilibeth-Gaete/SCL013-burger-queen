@@ -54,7 +54,6 @@ const Cocina = () => {
                                     <li> {elemento.nombrePedido} </li>
                                 ))}</span>
                             <p>Total : $ {item.total}</p>
-                            <p>Estado:{item.estado}</p>
                             <button className="btn btn-success btn-sm" onClick={() => eliminarEstado(item.id)} value={item.id}>Listo</button>
                         </li>
                     ))
