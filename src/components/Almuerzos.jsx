@@ -55,6 +55,8 @@ const Almuerzos = (props) => {
       console.log(error)
     }
     console.log(agregar)
+    setAgregar([]);
+    setPrecioTotal([]);
   }
 
   suma = precioTotal.reduce((acc, el) => acc + el, 0);

@@ -54,6 +54,8 @@ const Desayuno = (props) => {
       console.log(error)
     }
     console.log(agregar)
+    setAgregar([]);
+    setPrecioTotal([]);
 
 
   }
@@ -66,7 +68,7 @@ const Desayuno = (props) => {
     console.log("posicion01", posicion)
     agregar.splice(posicion, 1)
     setAgregar([...agregar])
-    console.log("agreganddo",agregar)
+    console.log("agreganddo", agregar)
     precioTotal.splice(posicion, 1)
 
   }
@@ -98,10 +100,10 @@ const Desayuno = (props) => {
             <h3>Resumen Pedido</h3>
             {
               agregar.map((element, i) => {
-               console.log("este es mi element", element)
+                console.log("este es mi element", element)
                 return (
                   <ul key={element.id} className="pedido" >
-                    <button onClick={eliminar} nombre={element} value={i} className="btn btn-dark btn-sm">x</button><ResumenPedido nombre={element}/> 
+                    <button onClick={eliminar} nombre={element} value={i} className="btn btn-dark btn-sm">x</button><ResumenPedido nombre={element} />
                   </ul>
                 )
               })

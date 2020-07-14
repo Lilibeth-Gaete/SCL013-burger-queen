@@ -23,6 +23,16 @@ const Cocina = () => {
         obtenerDatos()
 
     }, [])
+    const eliminarEstado = async (id) => {
+        console.log("el id", id)
+        try {
+            await db.collection('pedidos').doc(id).update({
+                estado: "Listo"
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     return (
         <Fragment>
@@ -35,7 +45,7 @@ const Cocina = () => {
                 <h3>Resumen Pedido</h3>
                 {
                     tareas.map(item => (
-                        <li className="contenedorLista">
+                        <li className="contenedorLista" key={item.id}>
                             <p>Mesero: {item.mesero}</p>
                             <p>Cliente: {item.cliente} </p>
                             <span  >
@@ -44,7 +54,8 @@ const Cocina = () => {
                                     <li> {elemento.nombrePedido} </li>
                                 ))}</span>
                             <p>Total : $ {item.total}</p>
-                            <button className="btn btn-success btn-sm">Listo</button>
+                            <p>Estado:{item.estado}</p>
+                            <button className="btn btn-success btn-sm" onClick={() => eliminarEstado(item.id)} value={item.id}>Listo</button>
                         </li>
                     ))
 
