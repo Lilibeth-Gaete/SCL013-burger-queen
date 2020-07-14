@@ -156,9 +156,9 @@ los que trabajes.
 
 # Autoras
 
-* Fernanda Montecinos(https://https://github.com/montecinosc)
-* Lilibeth Gaete(https://https://github.com/Lilibeth-Gaete)
-* Bárbara Madariaga(https://https://github.com/BarbaraMV)
+* [Fernanda Montecinos](https://https://github.com/montecinosc)
+* [Lilibeth Gaete](https://https://github.com/Lilibeth-Gaete)
+* [Bárbara Madariaga](https://https://github.com/BarbaraMV)
 
 Gracias por su atención.
 
