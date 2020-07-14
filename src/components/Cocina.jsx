@@ -12,7 +12,7 @@ const Cocina = () => {
         const obtenerDatos = async () => {
 
             try {
-                const data = await db.collection('pedidos').get()
+                const data = await db.collection('pedidos').where("estado", "==", "Pendiente").get()
                 const arrayData = data.docs.map(doc => ({ id: doc.id, ...doc.data() }))
                 console.log(arrayData)
                 setTareas(arrayData)
