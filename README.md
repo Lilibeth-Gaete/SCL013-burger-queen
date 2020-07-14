@@ -1,250 +1,80 @@
-# Burger Queen
+ ![imagen mostrar](/src/img/Logo.jpg)
 
-## Índice
+# Las Cabras, comida chilena
 
-* [1. Preámbulo](#1-preámbulo)
+## Introducción.
+
+* [1. Introducción ](#1-Introduccion)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Pistas, tips y lecturas complementarias](#6-pistas-tips-y-lecturas-complementarias)
+* [3. Uso de la plataforma](#3-uso-de-la-plataforma)
+* [4. Diseño de alta fidelidad](#4-diseño-de-alta-fidelidad)
 
 ***
 
-## 1. Preámbulo
+## 1. Introducción
 
-[React](https://es.reactjs.org/) y [Angular](https://angular.io/) son algunos de los _frameworks_ y _librerías_ de JavaScript más utilizados por
-lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
-En el contexto del navegador, [_mantener la interfaz sincronizada con el estado
-es difícil_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
-Al elegir un _framework_ o _librería_ para nuestra interfaz, nos apoyamos en una
-serie de convenciones e implementaciones _probadas_ y _documentadas_ para
-resolver un problema común a toda interfaz web. Esto nos permite concentrarnos
-mejor (dedicar más tiempo) en las caractrísticas _específicas_ de
-nuestra aplicación.
+Burger Queen es una interfaz que permite a un local de comida, en nuesto caso "Las Cabras, comida chilena" anotar las ordenes de los clientes. Ya no más lapiz, papel y letra ilegible en las comandas. Con esta aplicación podrás obtener de manera rápida los pedidos de los clientes, mediante el mesero, quien utilizará la aplicación a través de una tablet, ya que es una plataforma responsiva, diseñada para la comodidad de una tableta.
 
-Cuando elegimos una de estas tecnologías no solo importamos un pedacito de
-código para reusarlo (lo cuál es un gran valor per se), si no que adoptamos una
-**arquitectura**, una serie de **principios de diseño**, un **paradigma**, unas
-**abstracciones**, un **vocabulario**, una **comunidad**, etc...
-
-Como desarrolladora Front-end, estos kits de desarrollo pueden resultarte
-de gran ayuda para implementar rápidamente características de los proyectos en
-los que trabajes.
 
 ## 2. Resumen del proyecto
 
-Esta vez tenemos un proyecto 100% por encargo. Si bien siempre puedes (y debes)
-hacer sugerencias de mejoras y/o cambios, muchas veces trabajarás en proyectos
-en los que primero hay que asegurarse de cumplir con lo requerido.
+Somos "Las Cabras" un restaurante de comida típica chilena, con platos muy caseros y sabrosos, al gusto del cliente.
+nuestra especialidad es dejar al cliente satisfecho, contento y con ganas de volver a probar nuestra rica comida, con
+ingredientes finamente seleccionados para entregar la mejor calidad de productos al consumidor.
 
-Un pequeño restaurante de hamburguesas, que está creciendo, necesita una
-interfaz en la que puedan tomar pedidos usando una _tablet_, y enviarlos
-a la cocina para que se preparen ordenada y eficientemente (a través de un
-  _backend_ del que nos darán detalles más adelante).
+En primer lugar, nuestro proyecto va enfocado al uso que da el mesero para hacer el servicio más rápido en la toma de los pedidos, y a su vez que no existan complicaciones de orden a la hora de la preparación, evitando comandas perdidas y letra poco legible para nuestros chefs.
 
-![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
+El menu consta de dos categorias principales, una de ellas es Desayuno, en donde el cliente se podrá deleitar con una rica paila de huevos, obviamente de campo, en un delicioso pan amasado o marraqueta, recien salida del hono de barro.
+Ademas en la carta ofrecemos un delicioso arrollado de huaso para empezar la mañana con mucha energía.
+Incluimos promociones, en la cual puede agregar longanizas por $1500 pesos.
 
-Esta es la información que tenemos del cliente:
+La segunda categoría es Almuerzos, en donde tenemos la mejor selección de platos chilenos, tales como porotos con rienda y longaniza, charquican, pantrucas, el infaltable pastel de choclo y las deliciosas humitas, entre otros. Dentro de este menú se podrá seleccionar los bebestibles, que incluye agua mineral, gaseosas y por supuesto un gran vino Chileno, tipico de nuestra tierra.
 
-> Somos **Burguer Queen**, una cadena de comida 24hrs.
->
-> Nuestra propuesta de servicio 24hrs ha tenido muy buena acogida y, para
-> seguir creciendo, necesitamos un sistema que nos ayude a tomar los pedidos de
-> nuestros clientes.
->
-> Tenemos 2 menús: uno muy sencillo para el desayuno:
->
-> | Ítem                      |Precio $|
-> |---------------------------|------|
-> | Café americano            |    5 |
-> | Café con leche            |    7 |
-> | Sandwich de jamón y queso |   10 |
-> | Jugo de frutas natural              |    7 |
->
-> Y otro menú para el resto del día:
->
-> | Ítem                      |Precio|
-> |---------------------------|------|
-> |**Hamburguesas**           |   **$**   |
-> |Hamburguesa simple         |    10|
-> |Hamburguesa doble          |    15|
-> |**Acompañamientos**        |   **$**   |
-> |Papas fritas               |     5|
-> |Aros de cebolla            |     5|
-> |**Para tomar**             |   **$**   |
-> |Agua 500ml                 |     5|
-> |Agua 750ml                 |     7|
-> |Bebida/gaseosa 500ml       |     7|
-> |Bebida/gaseosa 750ml       |     10|
->
-> **Importante:** Los clientes pueden escoger entre hamburguesas de res,
-> de pollo, o vegetariana. Además, por $ 1 adicional, pueden agregarle queso
-> o huevo.
->
-> Nuestros clientes son bastante indecisos, por lo que es muy común que cambien
->el su pedido varias veces antes de finalizarlo.
+A continuacion se puede ver el detalle de ambos menu:
 
-La interfaz debe mostrar los dos menús (desayuno y resto del día), cada uno
+
+![imagen a mostrar](src/img/menuDesayuno.jpg)
+![imagen a mostrar](src/img/menuAlmuerzo.jpg)
+
+Nuestros clientes podrán cambiar de parecer al elegir un plato, por lo que se podrá editar la comanda cuantas veces lo requiera antes de finalizarla.
+
+
+La interfaz debe mostrar los dos menús (desayuno y Almuerzo), cada uno
 con todos sus _productos_. El usuario debe poder ir eligiendo qué _productos_
 agregar y la interfaz debe ir mostrando el _resumen del pedido_ con el
 costo total.
 
-![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
+## 3. Uso de la plataforma
 
-## 3. Objetivos de aprendizaje
+El uso de la aplicacion es bastante sencillo y no requiere de un conocimiento avanzado para poder usarla. Es intuitiva y facil dde usar. Primero que todo tenemos la pagina inicial con el logotipo del restaurant, en esa vista hay un boton "Entrar" que nos redirige inmediatamente a la selección del tipo de Menu.
 
-El objetivo principal de este proyecto es aprender a construir una _interfaz web_
-usando el _framework_ elegido (React o Angular). Todos estos frameworks de
-Front-end atacan el mismo problema: **cómo mantener la interfaz y el estado sincronizados**.
-Así que esta experiencia espera familiarizarte con el concepto de _estado de pantalla_,
-y cómo cada cambio sobre el estado se va a ir reflejando en la interfaz (por ejemplo,
-cada vez que agregamos un _producto_ a un _pedido_, la interfaz debe actualizar
-la lista del pedido y el total).
+Posterior a la seleccion del menu, ya sea, Desayunos o Almuerzos, el mesero debe ingresar su nombre en el área indicada, esto hará que las comandas estén identificadas con su nombre ante cualquier eventualidad. También se debe ingresar el nombre del cliente y su mesa para identificar donde se va a entregar el pedido.
 
-A continuación puedes ver los objetivos de aprendizaje de este proyecto:
+Una vez ingresado ambos nombres, se hace la selección de productos que el cliente desea comer y se presiona el boton "Enviar" en donde se mandará la comanda a la cocina junto con el precio para realizar la boleta posterior.
 
-### HTML y CSS
+Luego de ser ingresada la orden el cocinero deberá indicar solo cuando esté lista para que el mesero la entregue al cliente, así la interaccion es mucho más rapida para el chef, ya que no puede estar pendiente de presionar tantos botones en la tablet, y solo lo hará cuando finalice la orden.
 
-* [ ] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] Uso de selectores de CSS.
-* [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
-* [ ] [Uso de flexbox en CSS.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-* [ ] [Uso de Media Queries.](https://developer.mozilla.org/es/docs/CSS/Media_queries)
+## 4. Diseño de alta fidelidad
 
-### JavaScript
+Para nuestro diseño de alta fidelidad usamos la aplicación Figma, la cual nos ayudó mucho a la visualización de nuestra aplicacion y concretando las ideas que teníamos sobre el diseño de la plataforma. Se trató de respetar la linea del prototipo, pero siempre mejorando el diseño según el feedback de personas entendidas en la materia. 
 
-* [ ] Uso de condicionales (if-else | switch | operador ternario)
-* [ ] Uso de funciones (parámetros | argumentos | valor de retorno)
-* [ ] Manipular arrays (filter | map | sort | reduce)
-* [ ] Manipular objects (key | value)
-* [ ] Uso ES modules ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
-| [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
-* [ ] Diferenciar entre expression y statements.
-* [ ] Diferenciar entre tipos de datos atómicos y estructurados.
-* [ ] [Uso de callbacks.](https://developer.mozilla.org/es/docs/Glossary/Callback_function)
-* [ ] [Consumo de Promesas.](https://scotch.io/tutorials/javascript-promises-for-dummies#toc-consuming-promises)
+A continuacion visualizaremos el diseño inicial de la aplicación.
 
-### Testing
+Menu principal: La paleta de colores era en un inicio negro con naranjo/damasco, sin embargo al llevar a cabo el proyecto nos dimos cuenta que las imagenes de los alimentos ya contenian demasiada informacion visual, por lo que se sugirió un cambio de colores, dejando algo mas neutro y menos cargado. 
+Después de probar varios estilos de fondo, nos quedamos con el negro pizarra, que combina muy bien con la temática escogida y con ingredientes naturales, tales como los de nuestros platos chilenos.
 
-* [ ] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
+![menuPrincipal mostrar](src/img/menuPrincipalDesign.jpg)
 
-### Estructura del código y guía de estilo
+Cocina: Para la seccion del Cocinero se cambio el nombre de la pestaña Orden a Cocina, para que sea más entendible, en esta sección tambien los colores variaron respecto al diseño original pero manteniendo la facilidad de manejo al usuario, en este caso, el Jefe de cocina. Las ordenes se agrupan por orden de llegada y con la comanda muy bien especificada.
 
-* [ ] Organizar y dividir el código en módulos (Modularización)
-* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica)
-* [ ] Uso de linter (ESLINT)
+![cocina mostrar](src/img/cocina.jpg)
 
-### Git y Github
+Estado de la comanda: Para finalizar el diseño de alta fidelidad incluimos un apartado para estado de la comanda, inicialmente llamado Orden Lista, se cambio el nombre para entregar congruencia al lenguaje gastronómico. En esta sección se puede ver la hora de salida del plato para que sea entregado a los comensales y una vez finalizado este proceso se puede marcar con el boton "Entregado". La paleta de colores también varió y se opto por colores mas sobrios.
 
-* [ ] Uso de comandos de git (add | commit | pull | status | push)
-* [ ] Manejo de repositorios de GitHub (clone | fork | gh-pages)
-* [ ] Colaboración en Github (branches | pull requests | |tags)
-* [ ] Organización en Github (projects | issues | labels | milestones)
+![estadoComanda mostrar](src/img/estadoComanda.jpg)
 
-### Firebase
 
-* [ ] [Firestore.](https://firebase.google.com/docs/firestore)
-* [ ] [Firebase Auth.](https://firebase.google.com/docs/auth/web/start)
-* [ ] [Firebase security rules.](https://firebase.google.com/docs/rules)
-* [ ] Observadores. ([onAuthStateChanged](https://firebase.google.com/docs/auth/web/manage-users?hl=es#get_the_currently_signed-in_user)
- | [onSnapshot](https://firebase.google.com/docs/firestore/query-data/listen#listen_to_multiple_documents_in_a_collection))
-
-### Angular
-
-* [ ] [Components & templates.](https://angular.io/guide/architecture-components#introduction-to-components)
-* [ ] [Directivas estructurales (ngIf / ngFor)](https://angular.io/guide/template-syntax#built-in-structural-directives)
-* [ ] [@Input | @Ouput](https://angular.io/guide/component-interaction#component-interaction)
-* [ ] [Creación y uso de servicios.](https://angular.io/guide/architecture-services#providing-services)
-* [ ] [Manejos de rutas.](https://angular.io/guide/router)
-* [ ] [Creación y uso Observables.](https://angular.io/guide/observables-in-angular)
-* [ ] [Uso de HttpClient.](https://angular.io/guide/http)
-* [ ] [Estilos de componentes (ngStyle / ngClass)](https://angular.io/guide/template-syntax#built-in-directives)
-
-### React
-
-* [ ] [`JSX`](https://es.reactjs.org/docs/introducing-jsx.html)
-* [ ] [Componentes `class` y componentes `function`](https://es.reactjs.org/docs/components-and-props.html#function-and-class-components)
-* [ ] `props`
-* [ ] [Eventos en React.](https://es.reactjs.org/docs/handling-events.html)
-* [ ] [Listas y keys.](https://es.reactjs.org/docs/lists-and-keys.html)
-* [ ] [Renderizado condicional.](https://es.reactjs.org/docs/conditional-rendering.html)
-* [ ] [Elevación de estados.](https://es.reactjs.org/docs/lifting-state-up.html)
-* [ ] [`hooks`](https://es.reactjs.org/docs/hooks-intro.html)
-* [ ] [`CSS` modules.](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet)
-* [ ] [React Router.](https://reacttraining.com/react-router/web)
-
-### UX
-
-* [ ] Diseñar la aplicación pensando y entendiendo al usuario.
-* [ ] Crear prototipos para obtener feedback e iterar.
-* [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
-* [ ] Planear y ejecutar tests de usabilidad.
-
-## 4. Consideraciones generales
-
-Este proyecto se debe "resolver" de forma individual.
-
-Trabaja en una historia hasta terminarla antes de pasar a la siguiente. Trabaja
-hasta la historia que puedas en el tiempo especificado.
-
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6+), HTML y CSS y empaquetada de manera automatizada.
-En este proyecto Sí está permitido usar librerías o frameworks
-(debes elegir entre [React](https://es.reactjs.org/) o
-[Angular](https://angular.io/)).
-
-La aplicación debe ser un _Single Page App_. Los pedidos los tomaremos desde una
-_tablet_, pero **no queremos una app nativa**, sino una web app que sea
-**responsive** y pueda funcionar **offline**.
-
-Necesitamos pensar bien en el aspecto UX de de quienes van a tomar los pedidos,
- el tamaño y aspecto de los botones, la visibilidad del estado actual del
- pedido, etc.
-
-La aplicación desplegada debe tener 80% o más el las puntuaciones de
-Performance, Progressive Web App, Accessibility y Best Practices de Lighthouse.
-
-La aplicación debe hacer uso de `npm-scripts` y contar con scripts `start`,
-`test`, `build` y `deploy`, que se encarguen de arrancar, correr las pruebas,
-empaquetar y desplegar la aplicación respectivamente.
-
-Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
-_lines_ y _branches_.
-
-Este proyecto incluye un _boilerplate_ con el código necesario para arrancar con
-la parte de backend ya resuelta. El _boilerplate_ incluye los siguientes
-archivos/carpetas con la configuración de Fierbase (hosting, firestore y
-functions):
-
-```text
-./04-burger-queen/
-├── firebase.json
-├── firestore.indexes.json
-├── firestore.rules
-├── functions
-│   ├── index.js
-│   ├── package.json
-└── README.md
-```
-
-Por otro lado, la parte de la interfaz no está incluida, por lo que, deberás
-definir la estructura de carpetas y archivos que consideres necesaria. Puedes
-guiarte de las convenciones del _framework_ elegido. Por ende, los _tests_ y el
-_setup_ necesario para ejecutarlos, serán hechos por ti.
-
-Para comenzar este proyecto tendrás que hacer un _fork_ y _clonar_ este
-repositorio.
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-### Definición del producto
-
-El [_Product Owner_](https://www.youtube.com/watch?v=r2hU7MVIzxs&t=202s) nos
-presenta este _backlog_ que es el resultado de su trabajo con el cliente hasta
-hoy.
-
-***
+# Historias de usuario
 
 #### [Historia de usuario 1] Mesero/a debe poder tomar pedido de cliente
 
@@ -254,7 +84,7 @@ que se puedan ir preparando en orden.
 
 ##### Criterios de aceptación
 
-Lo que debe ocurrir para que se satisfagan las necesidades del usuario)
+Lo que debe ocurrir para que se satisfagan las necesidades del usuario
 
 * Anotar nombre de cliente.
 * Agregar productos al pedido.
@@ -262,17 +92,6 @@ Lo que debe ocurrir para que se satisfagan las necesidades del usuario)
 * Ver resumen y el total de la compra.
 * Enviar pedido a cocina (guardar en alguna base de datos).
 * Se ve y funciona bien en una _tablet_
-
-##### Definición de terminado
-
-Lo acordado que debe ocurrir para decir que la historia está terminada.
-
-* Debes haber recibido _code review_ de al menos una compañera.
-* Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-* Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-* Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-
-***
 
 #### [Historia de usuario 2] Jefe de cocina debe ver los pedidos
 
@@ -287,15 +106,6 @@ que un pedido está listo para servirlo a un cliente.
 * Ver el tiempo que tomó prepara el pedido desde que llegó hasta que se
   marcó como completado.
 
-##### Definición de terminado
-
-* Debes haber recibido _code review_ de al menos una compañera.
-* Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-* Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-* Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-
-***
-
 #### [Historia de usuario 3] Meserx debe ver pedidos listos para servir
 
 Yo como meserx quiero ver los pedidos que están preparados para entregarlos
@@ -306,118 +116,50 @@ rápidamente a los clientes que las hicieron.
 * Ver listado de pedido listos para servir.
 * Marcar pedidos que han sido entregados.
 
-##### Definición de terminado
 
-* Debes haber recibido _code review_ de al menos una compañera.
-* Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-* Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-* Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-* Los datos se deben mantener íntegros, incluso después de que un pedido ha
-  terminado. Todo esto para poder tener estadísticas en el futuro.
+# Proyecto finalizado
 
-***
+Para concretar el proyecto se hizo algunos cambios en la paleta de colores, prefiriendo un diseño mas sobrio y con la menor cantidad de botones posible para que la interacción sea mas rápida y fluida a la hora de tomar la orden, a continuación se muestra las distintas vistas de la aplicación
 
-## 6. Pistas, tips y lecturas complementarias
+![portada mostrar](src/img/portada.jpg)
 
-### Primeros pasos
+![desayuno mostrar](src/img/desayuno.jpg)
 
-1. El primer paso de este proyecto debe ser convertir el menú descrito por el
-   cliente en una estructura que podamos poner en un archivo JSON para después
-   _pintar_ en la pantalla
+![almuerzo mostrar](src/img/almuerzo.jpg)
 
-2. Haz un _fork_ de este repo (en GitHub).
+![cocina mostrar](src/img/cocinafinal.jpg)
 
-3. Clona tu _fork_ en tu computadora:
+![comandas mostrar](src/img/comandas.jpg)
 
-   ```sh
-   git clone git@github.com:<tu-usuario-de-github>/<cohortid>-burger-queen.git
-   cd <cohortid>-burger-queen
-   ```
 
-4. Crea una rama a partir de `master` para empezar a trabajar. Por ejemplo:
+# Libreria utilizada
 
-   ```sh
-   git checkout -b develop
-   ```
+[React](https://es.reactjs.org/) es una _librería_ de JavaScript más utilizados por
+lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
+En el contexto del navegador, [_mantener la interfaz sincronizada con el estado
+es difícil_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
+Al elegir una _librería_ para nuestra interfaz, nos apoyamos en una
+serie de convenciones e implementaciones _probadas_ y _documentadas_ para
+resolver un problema común a toda interfaz web. Esto nos permite concentrarnos
+mejor (dedicar más tiempo) en las caractrísticas _específicas_ de
+nuestra aplicación.
 
-5. Crear proyecto en [Firebase](https://firebase.google.com/)
+Cuando elegimos una de estas tecnologías no solo importamos un pedacito de
+código para reusarlo (lo cuál es un gran valor per se), si no que adoptamos una
+**arquitectura**, una serie de **principios de diseño**, un **paradigma**, unas
+**abstracciones**, un **vocabulario**, una **comunidad**, etc...
 
-6. Habilitar Firestore (_comenzar en modo bloqueado_) en sección de "Bases de
-   Datos" de [Firebase console](https://console.firebase.google.com/).
+Como desarrolladora Front-end, estos kits de desarrollo pueden resultarte
+de gran ayuda para implementar rápidamente características de los proyectos en
+los que trabajes.
 
-7. Instalar utilidad de línea de comando de Firebase:
 
-   ```sh
-   npm i -g firebase-tools
-   ```
+# Autoras
 
-8. Agregamos entorno de producción para desplegar:
+* [Fernanda Montecinos](https://https://github.com/montecinosc)
+* [Lilibeth Gaete](https://https://github.com/Lilibeth-Gaete)
+* [Bárbara Madariaga](https://https://github.com/BarbaraMV)
 
-   ```sh
-   firebase use --add
-   ```
+Gracias por su atención.
 
-9. Instalar dependencias de cloud functions:
 
-   ```sh
-   # usando yarn
-   cd functions && yarn && cd ..
-   # alternativamente, usando npm
-   cd functions && npm install && cd ..
-   ```
-
-10. Desplegar: `firebase deploy`
-
-11. Llegado a este punto ya puedes comenzar con el _front-end_ :wink:
-
-***
-
-Nota para estudiantes que elijan React y quieran usar `create-react-app`:
-
-Si tratas de usar `create-react-app` en el directorio del proyecto recibirás un
-error diciendo que hay archivos que podrían presentar un conflicto. Para evitar
-este problema puedes crear una nueva app usando `create-react-app` y de ahí
-_mezclarla_ con la carpeta del proyecto:
-
-```sh
-# si estabase en la carpeta del proyecto, salimos a la carpeta de más arriba
-cd ..
-
-create-react-app burger-queen-tmp
-cp -r burger-queen/* burger-queen-tmp/
-cp -r burger-queen-tmp/.gitignore burger-queen-tmp/* burger-queen/
-rm -rf burger-queen-tmp
-cd burger-queen
-```
-
-### Otros recursos
-
-#### Frameworks / libraries
-
-* [React](https://es.reactjs.org/)
-* [Angular](https://angular.io/)
-
-#### Herramientas
-
-* [npm-scripts](https://docs.npmjs.com/misc/scripts)
-* [Babel](https://babeljs.io/)
-* [webpack](https://webpack.js.org/)
-
-#### PWA
-
-* [Tu primera Progressive Web App - Google developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)
-* [Progressive Web Apps - codigofacilito.com](https://codigofacilito.com/articulos/progressive-apps)
-* [offlinefirst.org](http://offlinefirst.org/)
-* [Usando Service Workers - MDN](https://developer.mozilla.org/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-* [Cómo habilitar datos sin conexión - Firebase Docs](https://firebase.google.com/docs/firestore/manage-data/enable-offline?hl=es-419)
-
-#### Serverless
-
-* [Qué es eso de serverless? - @PamRucinque en Medium](https://medium.com/@PamRucinque/qu%C3%A9-es-eso-de-serverless-f4f6c8949b87)
-* [Qué es Serverless? | FooBar - YouTube](https://www.youtube.com/watch?v=_SYHUpLi-2U)
-* [Firebase](https://firebase.google.com/)
-* [Serverless Architectures - Martin Fowler](https://www.martinfowler.com/articles/serverless.html)
-
-#### Cloud functions
-
-* [Cloud functions - Firebase Docs](https://firebase.google.com/docs/functions/?hl=es-419)
