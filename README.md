@@ -1,4 +1,4 @@
-![imagen a mostrar] (/src/img/logo.jpg)
+![imagen] (/src/img/logo.jpg)
 
 # Las Cabras, comida chilena
 
