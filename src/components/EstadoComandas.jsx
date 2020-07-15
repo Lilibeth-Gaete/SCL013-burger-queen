@@ -12,10 +12,10 @@ const Cocina = () => {
   React.useEffect(() => {
     const obtenerDatos = async () => {
       try {
-        const data = await db.collection('pedidos').where("estado", "==", "Listo").get()
+        const data = await db.collection('pedidos').orderBy("fecha", "asc").get()
         const arrayData = data.docs.map(doc => ({ id: doc.id, ...doc.data() }))
-        console.log(arrayData)
-        setTareas(arrayData)
+        let filtrarDatos=arrayData.filter(arrayData => arrayData.estado === "Listo")
+        setTareas(filtrarDatos)
       } catch (error){
         console.log(error)
       }
