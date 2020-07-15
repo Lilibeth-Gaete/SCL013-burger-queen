@@ -51,6 +51,7 @@ const Cocina = () => {
                             <p>Hora ingreso:{moment(item.fecha).format(' h:mm:ss a')}</p>
                             <p>Mesero: {item.mesero} </p>
                             <p>Cliente: {item.cliente}</p>
+                            <p>Mesa: {item.mesa}</p>
                             <span  >
                                 <h5>Pedido</h5>
                                 {item.pedido.map(elemento => (

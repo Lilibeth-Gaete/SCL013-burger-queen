@@ -8,6 +8,7 @@ export const Item = () => {
     const [datos, setDatos] = useState({
         mesero: "",
         cliente: "",
+        mesa:"",
     });
     const handleInputChange = (event) => {
         setDatos({
@@ -38,6 +39,15 @@ export const Item = () => {
                             className="form-control form-control-sm"
                             type="text"
                             name="cliente"
+                            onChange={handleInputChange}
+                        ></input> 
+                    </div>
+                    <div className="col">
+                        <input
+                            placeholder="n° de mesa"
+                            className="form-control form-control-sm"
+                            type="text"
+                            name="mesa"
                             onChange={handleInputChange}
                         ></input> 
                     </div>
