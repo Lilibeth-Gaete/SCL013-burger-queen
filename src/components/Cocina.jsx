@@ -2,8 +2,7 @@ import React, { Fragment } from 'react'
 import { db } from "../firebase";
 import { Link } from "react-router-dom";
 import '../css/cocina.css';
-import moment from 'moment'
-import 'moment/locale/es' // Pasar a español
+
 
 const Cocina = () => {
 
@@ -15,9 +14,11 @@ const Cocina = () => {
 
             try {
                 const data = await db.collection('pedidos').orderBy("fecha", "asc").get()
+
                 const arrayData = data.docs.map(doc => ({ id: doc.id, ...doc.data() }))
-                let filtrarDatos=arrayData.filter(arrayData => arrayData.estado === "Pendiente")
+                let filtrarDatos = arrayData.filter(arrayData => arrayData.estado === "Pendiente")
                 setTareas(filtrarDatos)
+
             } catch (error) {
                 console.log(error)
             }
@@ -26,10 +27,11 @@ const Cocina = () => {
 
     }, [])
     const eliminarEstado = async (id) => {
-        console.log("el id", id)
+
         try {
             await db.collection('pedidos').doc(id).update({
-                estado: "Listo"
+                estado: "Listo",
+                horaListo: new Date().toLocaleTimeString()
             })
         } catch (error) {
             console.log(error)
@@ -48,7 +50,7 @@ const Cocina = () => {
                 {
                     tareas.map(item => (
                         <li className="contenedorLista" key={item.id}>
-                            <p>Hora ingreso:{moment(item.fecha).format(' h:mm:ss a')}</p>
+                            <p>Hora de ingreso : {item.hora} </p>
                             <p>Mesero: {item.mesero} </p>
                             <p>Cliente: {item.cliente}</p>
                             <p>Mesa: {item.mesa}</p>

@@ -3,7 +3,7 @@ import "../css/index.css";
 import data from "../menu/menu.json";
 import ResumenPedido from "./ResumenPedido";
 import { db } from "../firebase"
-//import Bebestibles from "./Bebestibles";
+
 
 
 const Almuerzos = (props) => {
@@ -13,7 +13,6 @@ const Almuerzos = (props) => {
   const [pendiente] = React.useState("Pendiente")
 
   const boleta = (e) => {
-    console.log("Entro a la funcion")
     //valor de cada producto
     const valor = e.target.value;
     const precioPedido = parseInt(valor);
@@ -33,28 +32,25 @@ const Almuerzos = (props) => {
       }
     );
     setAgregar([...agregar]);
-    console.log(agregar);
   };
 
   const agregarFirebase = async (e) => {
-    console.log("ingreso agregar almuerzo firebase")
     e.preventDefault()
     try {
       const nuevoPedido = {
         mesero: props.nombreMesero,
         cliente: props.nombreCliente,
-        mesa:props.mesa,
+        mesa: props.mesa,
         pedido: agregar,
         total: suma,
         fecha: Date.now(),
-        estado: pendiente
-
+        estado: pendiente,
+        hora: new Date().toLocaleTimeString()
       }
       const data = await db.collection("pedidos").add(nuevoPedido);
     } catch (error) {
       console.log(error)
     }
-    console.log(agregar)
     setAgregar([]);
     setPrecioTotal([]);
   }
@@ -75,7 +71,6 @@ const Almuerzos = (props) => {
         <div className="desayuno">
           <div className="contenedorIzquierdo">
             {almuerzos.map((element, i) => {
-              // console.log(element.name);
               return (
                 <div key={i} className="comida">
                   <p>
