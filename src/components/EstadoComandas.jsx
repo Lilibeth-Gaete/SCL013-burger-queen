@@ -2,21 +2,17 @@ import React, { Fragment } from 'react'
 import { db } from "../firebase";
 import { Link } from "react-router-dom";
 import '../css/cocina.css';
-import moment from 'moment'
-import 'moment/locale/es' // Pasar a español
-
 
 const Cocina = () => {
   const [tareas, setTareas] = React.useState([])
-  // const [edicion, setEdicion] = React.useState(false)
   React.useEffect(() => {
     const obtenerDatos = async () => {
       try {
-        const data = await db.collection('pedidos').where("estado", "==", "Listo").get()
+        const data = await db.collection('pedidos').orderBy("fecha", "asc").get()
         const arrayData = data.docs.map(doc => ({ id: doc.id, ...doc.data() }))
-        console.log(arrayData)
-        setTareas(arrayData)
-      } catch (error){
+        let filtrarDatos = arrayData.filter(arrayData => arrayData.estado === "Listo")
+        setTareas(filtrarDatos)
+      } catch (error) {
         console.log(error)
       }
     }
@@ -35,14 +31,15 @@ const Cocina = () => {
           tareas.map(item => (
             <div className="contenedorPrincipal">
               <div className="contenedorLista">
-             <p>Hora salida:{moment(item.fecha).format(' h:mm:ss a')}</p>
+                <p>Hora entrada: {item.hora}</p>
+                <p>Hora salida:{item.horaListo}</p>
                 <p>Mesero: {item.mesero} </p>
                 <p>Cliente: {item.cliente}</p>
                 <p>Mesa: {item.mesa}</p>
                 <span  >
                   <h5>Pedido</h5>
                   {item.pedido.map(elemento => (
-                  <li key={item.id}> {elemento.nombrePedido} ${elemento.precio}  </li>
+                    <li key={item.id}> {elemento.nombrePedido} ${elemento.precio}  </li>
                   ))}</span>
                 <p>Total : $ {item.total}</p>
                 <button className="btn btn-primary btn-sm">

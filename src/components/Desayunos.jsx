@@ -3,7 +3,6 @@ import "../css/index.css";
 import data from "../menu/menu.json";
 import ResumenPedido from "./ResumenPedido";
 import { db } from "../firebase"
-//import shortid from 'shortid';
 
 
 const Desayuno = (props) => {
@@ -32,7 +31,6 @@ const Desayuno = (props) => {
       }
     );
     setAgregar([...agregar]);
-    console.log("holi", agregar);
 
   };
 
@@ -42,11 +40,12 @@ const Desayuno = (props) => {
       const nuevoPedido = {
         mesero: props.nombreMesero,
         cliente: props.nombreCliente,
-        mesa:props.mesa,
+        mesa: props.mesa,
         pedido: agregar,
         total: suma,
         fecha: Date.now(),
-        estado: pendiente
+        estado: pendiente,
+        hora: new Date().toLocaleTimeString()
 
 
       }
@@ -54,7 +53,6 @@ const Desayuno = (props) => {
     } catch (error) {
       console.log(error)
     }
-    console.log(agregar)
     setAgregar([]);
     setPrecioTotal([]);
 
@@ -66,10 +64,8 @@ const Desayuno = (props) => {
   const eliminar = (e) => {
 
     const posicion = e.target.value;
-    console.log("posicion01", posicion)
     agregar.splice(posicion, 1)
     setAgregar([...agregar])
-    console.log("agreganddo", agregar)
     precioTotal.splice(posicion, 1)
 
   }
@@ -81,7 +77,6 @@ const Desayuno = (props) => {
         <div className="desayuno">
           <div className="contenedorIzquierdo">
             {desayunos.map((element, i) => {
-              //console.log(element.name);
               return (
                 <div key={i} className="comida">
                   <p>
@@ -101,7 +96,6 @@ const Desayuno = (props) => {
             <h3>Resumen Pedido</h3>
             {
               agregar.map((element, i) => {
-                console.log("este es mi element", element)
                 return (
                   <ul key={element.id} className="pedido" >
                     <button onClick={eliminar} nombre={element} value={i} className="btn btn-dark btn-sm">x</button><ResumenPedido nombre={element} />
