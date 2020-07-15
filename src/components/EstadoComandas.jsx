@@ -2,6 +2,9 @@ import React, { Fragment } from 'react'
 import { db } from "../firebase";
 import { Link } from "react-router-dom";
 import '../css/cocina.css';
+import moment from 'moment'
+import 'moment/locale/es' // Pasar a español
+
 
 const Cocina = () => {
   const [tareas, setTareas] = React.useState([])
@@ -13,7 +16,7 @@ const Cocina = () => {
         const arrayData = data.docs.map(doc => ({ id: doc.id, ...doc.data() }))
         console.log(arrayData)
         setTareas(arrayData)
-      } catch (error) {
+      } catch (error){
         console.log(error)
       }
     }
@@ -32,12 +35,14 @@ const Cocina = () => {
           tareas.map(item => (
             <div className="contenedorPrincipal">
               <div className="contenedorLista">
-                <p>Mesero: {item.mesero}</p>
-                <p>Cliente: {item.cliente} </p>
+             <p>Hora salida:{moment(item.fecha).format(' h:mm:ss a')}</p>
+                <p>Mesero: {item.mesero} </p>
+                <p>Cliente: {item.cliente}</p>
+                <p>Mesa: {item.mesa}</p>
                 <span  >
                   <h5>Pedido</h5>
                   {item.pedido.map(elemento => (
-                    <li key={item.id}> {elemento.nombrePedido} ${elemento.precio}  </li>
+                  <li key={item.id}> {elemento.nombrePedido} ${elemento.precio}  </li>
                   ))}</span>
                 <p>Total : $ {item.total}</p>
                 <button className="btn btn-primary btn-sm">

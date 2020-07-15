@@ -8,6 +8,7 @@ export const Item = () => {
     const [datos, setDatos] = useState({
         mesero: "",
         cliente: "",
+        mesa:"",
     });
     const handleInputChange = (event) => {
         setDatos({
@@ -39,7 +40,16 @@ export const Item = () => {
                             type="text"
                             name="cliente"
                             onChange={handleInputChange}
-                        ></input>
+                        ></input> 
+                    </div>
+                    <div className="col">
+                        <input
+                            placeholder="n° de mesa"
+                            className="form-control form-control-sm"
+                            type="text"
+                            name="mesa"
+                            onChange={handleInputChange}
+                        ></input> 
                     </div>
                     <div className="col">
                         <button className="btn btn-dark" type="submit">
@@ -56,10 +66,10 @@ export const Item = () => {
                             </div>
                             <Switch>
                                 <Route path="/Desayunos" exact>
-                                    <Desayunos nombreMesero={datos.mesero} nombreCliente={datos.cliente} />
+                                    <Desayunos nombreMesero={datos.mesero} nombreCliente={datos.cliente} mesa={datos.mesa} />
                                 </Route>
                                 <Route path="/Almuerzos" exact>
-                                    <Almuerzos nombreMesero={datos.mesero} nombreCliente={datos.cliente} />
+                                    <Almuerzos nombreMesero={datos.mesero} nombreCliente={datos.cliente} mesa={datos.mesa}/>
                                 </Route>
                             </Switch>
                         </div>

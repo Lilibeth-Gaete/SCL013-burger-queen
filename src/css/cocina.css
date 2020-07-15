@@ -18,12 +18,12 @@
 
 .contenedorLista span {
   margin-top: 10px;
-  color: white;
+  color: grey;
   font-size: 15px;
 }
 
 .contenedorLista li{
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .contenedorCocina p {
@@ -40,7 +40,6 @@
 
 .contenedorLista .btn.btn-primary.btn-sm {
   margin-left: 75%;
-  color: white;
   background-color: #063b5a;
   border-style: none;
 }
