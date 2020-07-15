@@ -42,6 +42,7 @@ const Desayuno = (props) => {
       const nuevoPedido = {
         mesero: props.nombreMesero,
         cliente: props.nombreCliente,
+        mesa:props.mesa,
         pedido: agregar,
         total: suma,
         fecha: Date.now(),

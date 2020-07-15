@@ -34,9 +34,8 @@ const Almuerzos = (props) => {
     );
     setAgregar([...agregar]);
     console.log(agregar);
-
-
   };
+
   const agregarFirebase = async (e) => {
     console.log("ingreso agregar almuerzo firebase")
     e.preventDefault()
@@ -44,6 +43,7 @@ const Almuerzos = (props) => {
       const nuevoPedido = {
         mesero: props.nombreMesero,
         cliente: props.nombreCliente,
+        mesa:props.mesa,
         pedido: agregar,
         total: suma,
         fecha: Date.now(),
