@@ -2,9 +2,11 @@ import React, { Fragment } from 'react'
 import { db } from "../firebase";
 import { Link } from "react-router-dom";
 import '../css/cocina.css';
+import Swal from 'sweetalert2'
 
 const Cocina = () => {
   const [tareas, setTareas] = React.useState([])
+  const [entregarPedido, setEntregarPedido] = React.useState(true);
   React.useEffect(() => {
     const obtenerDatos = async () => {
       try {
@@ -18,6 +20,28 @@ const Cocina = () => {
     }
     obtenerDatos()
   }, [])
+
+
+
+  const editarEstado = async (id) => {
+
+    try {
+      await db.collection('pedidos').doc(id).update({
+        estado: "Entregado",
+        horaListo: new Date().toLocaleTimeString()
+      })
+    } catch (error) {
+      console.log(error)
+    }
+    Swal.fire({
+      title: '¡Orden entregada!',
+      text: 'Boleta enviada a caja', icon: 'success', confirmButtonText: 'Ok'
+    })
+  }
+
+
+
+
   return (
     <Fragment>
       <div className="btn-group">
@@ -40,16 +64,20 @@ const Cocina = () => {
                   <h5>Pedido</h5>
                   {item.pedido.map(elemento => (
                     <li key={item.id}> {elemento.nombrePedido} ${elemento.precio}  </li>
-                  ))}</span>
+
+                  ))
+                  }
+                </span>
                 <p>Total : $ {item.total}</p>
-                <button className="btn btn-primary btn-sm">
+                <button value={item.id} onClick={() => editarEstado(item.id)} className="btn btn-primary btn-sm">
                   Entregar</button>
               </div>
+
             </div>
           ))
         }
       </div>
-    </Fragment>
+    </Fragment >
   )
 }
 export default Cocina;

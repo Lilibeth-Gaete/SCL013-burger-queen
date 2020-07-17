@@ -1,14 +1,13 @@
 import React, { Fragment, useState } from 'react';
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Desayunos from "./Desayunos";
-
 import Almuerzos from "./Almuerzos";
 
 export const Item = () => {
     const [datos, setDatos] = useState({
         mesero: "",
         cliente: "",
-        mesa:"",
+        mesa: "",
     });
     const handleInputChange = (event) => {
         setDatos({
@@ -31,6 +30,7 @@ export const Item = () => {
                             type="text"
                             name="mesero"
                             onChange={handleInputChange}
+                            required
                         ></input>
                     </div>
                     <div className="col">
@@ -40,20 +40,22 @@ export const Item = () => {
                             type="text"
                             name="cliente"
                             onChange={handleInputChange}
-                        ></input> 
+                        ></input>
                     </div>
                     <div className="col">
                         <input
                             placeholder="n° de mesa"
                             className="form-control form-control-sm"
-                            type="text"
                             name="mesa"
+                            type="number"
+                            min="0"
+                            max="50"
                             onChange={handleInputChange}
-                        ></input> 
+                        ></input>
                     </div>
                     <div className="col">
                         <button className="btn btn-dark" type="submit">
-                            Confirmar
+                            Registrar
           </button>
                     </div>
                 </form>
@@ -69,7 +71,7 @@ export const Item = () => {
                                     <Desayunos nombreMesero={datos.mesero} nombreCliente={datos.cliente} mesa={datos.mesa} />
                                 </Route>
                                 <Route path="/Almuerzos" exact>
-                                    <Almuerzos nombreMesero={datos.mesero} nombreCliente={datos.cliente} mesa={datos.mesa}/>
+                                    <Almuerzos nombreMesero={datos.mesero} nombreCliente={datos.cliente} mesa={datos.mesa} />
                                 </Route>
                             </Switch>
                         </div>

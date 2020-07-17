@@ -1,0 +1,15 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /orders/{id} {
+      allow read, write: if true;
+    }
+
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
+
+
+
+
