@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Desayunos from "./Desayunos";
-
 import Almuerzos from "./Almuerzos";
 
 export const Item = () => {
@@ -31,6 +30,7 @@ export const Item = () => {
                             type="text"
                             name="mesero"
                             onChange={handleInputChange}
+                            required
                         ></input>
                     </div>
                     <div className="col">
@@ -46,8 +46,10 @@ export const Item = () => {
                         <input
                             placeholder="n° de mesa"
                             className="form-control form-control-sm"
-                            type="text"
                             name="mesa"
+                            type="number"
+                            min="0"
+                            max="50"
                             onChange={handleInputChange}
                         ></input>
                     </div>

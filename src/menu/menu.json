@@ -21,13 +21,16 @@
     "img": "http://imgfz.com/i/U1Jy0BE.png"
   }, {
     "name": "Longaniza",
-    "precio": 1500
+    "precio": 1500,
+    "img": "http://imgfz.com/i/KqpebWM.png"
   }, {
     "name": "Marraqueta",
-    "precio": 0
+    "precio": 0,
+    "img": "http://imgfz.com/i/jn6cxh1.png"
   }, {
     "name": "Amasado",
-    "precio": 0
+    "precio": 0,
+    "img": "http://imgfz.com/i/ecXrQKR.png"
   }],
   "Almuerzos": [{
     "name": "Porotos",
@@ -53,7 +56,7 @@
     "name": "Pantrucas",
     "precio": 3000,
     "img": "http://imgfz.com/i/aQgA98G.png"
-  },{
+  }, {
     "name": "Agua 500ml",
     "precio": 1000,
     "img": "http://imgfz.com/i/yrp0xoH.png"

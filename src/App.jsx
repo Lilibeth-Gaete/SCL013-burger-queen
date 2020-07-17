@@ -5,6 +5,7 @@ import Cocina from "./components/Cocina";
 import Inicio from "./components/Inicio";
 import EstadoComandas from "./components/EstadoComandas";
 
+
 function App() {
   return (
     <div>
@@ -23,6 +24,7 @@ function App() {
             <Route path="/EstadoComandas">
               <EstadoComandas />
             </Route>
+
           </Switch>
         </div>
       </Router>

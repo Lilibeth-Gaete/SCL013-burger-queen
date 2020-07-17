@@ -22,7 +22,7 @@
   font-size: 15px;
 }
 
-.contenedorLista li{
+.contenedorLista li {
   font-size: 18px;
 }
 
@@ -54,4 +54,12 @@
   margin-left: 0px;
   border-radius: 10px;
   list-style: none;
+}
+
+button.swal2-styled.swal2-confirm {
+  background-color: #063b5a;
+}
+
+.h2#swal2-title {
+  font-family: 'Cabin', sans-serif;
 }

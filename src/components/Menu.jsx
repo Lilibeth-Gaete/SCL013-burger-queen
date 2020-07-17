@@ -14,7 +14,6 @@ const Menu = () => {
           <Link to="/Cocina" className="btn btn-dark">Cocina</Link>
           <Link to="/EstadoComandas" className="btn btn-dark">Estado comandas</Link>
         </div>
-
         <Item />
       </div>
     </Fragment>

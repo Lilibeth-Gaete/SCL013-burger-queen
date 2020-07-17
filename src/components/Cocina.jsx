@@ -2,11 +2,13 @@ import React, { Fragment } from 'react'
 import { db } from "../firebase";
 import { Link } from "react-router-dom";
 import '../css/cocina.css';
+import Swal from 'sweetalert2'
 
 
 const Cocina = () => {
 
-    const [tareas, setTareas] = React.useState([])
+    const [tareas, setTareas] = React.useState([]);
+    const [listo, setListo] = React.useState(true);
 
     React.useEffect(() => {
 
@@ -26,7 +28,7 @@ const Cocina = () => {
         obtenerDatos()
 
     }, [])
-    const eliminarEstado = async (id) => {
+    const editarEstado = async (id) => {
 
         try {
             await db.collection('pedidos').doc(id).update({
@@ -36,6 +38,10 @@ const Cocina = () => {
         } catch (error) {
             console.log(error)
         }
+        Swal.fire({
+            title: 'Pedido listo',
+            text: 'Enviado a comanda', icon: 'warning', confirmButtonText: 'Ok'
+        })
     }
 
     return (
@@ -60,7 +66,7 @@ const Cocina = () => {
                                     <li> {elemento.nombrePedido} </li>
                                 ))}</span>
                             <p>Total : $ {item.total}</p>
-                            <button className="btn btn-success btn-sm" onClick={() => eliminarEstado(item.id)} value={item.id}>Listo</button>
+                            <button className="btn btn-success btn-sm" onClick={() => editarEstado(item.id)} value={item.id}>{listo ? "listo" : "Enviado"}</button>
                         </li>
                     ))
 
